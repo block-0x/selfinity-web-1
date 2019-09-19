@@ -26,40 +26,11 @@ Selfinity上ではオープンかつタイムリーに匿名で会話ができ�
 
 ## The algorithm of Contributes based Rewarding System(CBRS)
 
-```math
-A_i = \frac{\text{Valid Crypto Currency owned by user}}{\text{All valid Crypto Currency}} \hspace{3px} (A_i = 0.01 if A_i < 0.01 ) \\
-B_i = A_i * \alpha * (- \frac{1}{n} * x_i + 1) \hspace{3px} (B_i = 0.001 \hspace{3px} if B_i < 0.001 ) \\
-B^{good} = \sum_{i=1}^{n} (B_i * \theta) * \delta \\
-B^{bad} = \sum_{i=1}^{n} (B_i) * \delta \\
-Z_i = A_i + B^{good} - B^{bad} (Z_i = 0 if B^{bad} > 2 * B^{good} ) \\
-Z^{boost} = \sum_{i=1}^{n} (Z_i * \zeta_i) (\zeta_i = 0.01 if Z^{boost} < 0.01 ) \\
-\grave{Z_i} = A_i + B^{good} - B^{bad} + Z^{boost}(\grave{Z_i} = 0 if B^{bad} > 2 * B^{good} ) \\
-```
-
-```math
-T_i = \frac{\text{Valid Crypto Currency owned by Savor}}{\text{Left Days}} \\
-C_i = \frac{ \sum_{i=1}^{n} (\grave{Z_i}) }{ \text{All inflated Score per day} } \\
-R_i = T_i * C_i
-```
+![image-20190225170308033](./src/assets/images/CBRS.png)
 
 Variable roles are in berow list.
 
-```math
-A_i = \text{User score} \\
-B_i = \text{Voter score} \\
-B^{good} = \text{UpVote score} \\
-B^{bad} = \text{DownVote score} \\
-Z_i = \text{Content score} \\
-Z^{boost} = \text{Boost score} \\
-\grave{Z_i} = \text{Score of Content for boosts} \\
-T_i  = \text{Supplyable Crypto Currency per day} \\
-C_i  = \text{User degree of contribution per day} \\
-R_i  = \text{Amount of user rewarding per day} \\
-\alpha = \text{the parameter of validation voting. if invalid, }\alpha \text{ become 0.} \\
-\theta = \text{the parameter of validation voting. if invalid, }\theta \text{ become 0.} \\
-\delta = \text{the parameter of checking enough voting of number. if invalid, }\delta \text{ become 0.} \\
-\zeta = \text{the parameter of user clearing the conditional of boosts, if invalid, }\zeta \text{ become 0.} \\
-```
+![image-20190225170308033](./src/assets/images/variables.png)
 
 ## Installation
 
