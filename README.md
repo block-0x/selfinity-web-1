@@ -2,7 +2,7 @@
 
 ##### 会話の価値とお金の価値を結びつけるSNS ( https://selfinity.me/ )
 
-![img](https://gitlab.com/Zakimiii/selfinity-web/raw/recommend-item/src/app/assets/images/selfinity-logo.png)
+![img](./src/assets/images/selfinity-logo.png)
 
 ## Welcome to Selfinity
 
