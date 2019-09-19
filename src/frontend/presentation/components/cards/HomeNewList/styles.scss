@@ -1,0 +1,41 @@
+
+.home-new-list {
+  margin: 0% auto;
+  width: 900px;
+  @include mq-down(lg) {
+    width: 700px;
+  };
+  @include mq-down(md) {
+    width: 100%;
+  };
+  display: flex;
+  @include themify($themes) {
+    background: themed('backgroundLight');
+  }
+  &__category {
+    padding-top: 15px;
+    @include FS(FM);
+    @include FM(B);
+    @include themify($themes) {
+      color: themed('string');
+    }
+  }
+  &__header {
+    height: 140px;
+    width: 100%;
+    &__image {
+      height: 140px;
+      width: 100%;
+    }
+  }
+  &__item {
+    &__border {
+      height: 44px;
+      width: 100%;
+    }
+  }
+  &__new-item {
+    width: 100%;
+    min-height: 500px;
+  }
+}

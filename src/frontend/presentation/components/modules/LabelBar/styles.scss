@@ -1,0 +1,13 @@
+
+.label-bar {
+  height: 100%;
+  @include init_wh();
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  &__item {
+    margin: 4px;
+    display: inline-block;
+    // max-width: 100px;
+  }
+}

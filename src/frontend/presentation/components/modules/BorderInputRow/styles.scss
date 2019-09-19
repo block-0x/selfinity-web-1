@@ -1,0 +1,12 @@
+.border-input-row {
+  &__title {
+    @include FS(S);
+    @include FM(B);
+    @include themify($themes) {
+      color: themed('backgroundContrastLight');
+    }
+  }
+  &__value {
+    height: 44px;
+  }
+}

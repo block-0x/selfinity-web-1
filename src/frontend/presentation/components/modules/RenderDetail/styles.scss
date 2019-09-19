@@ -1,0 +1,7 @@
+.render-detail {
+  @include init_wh();
+  margin-bottom: 40vh;
+  &__header {
+    margin-bottom: 44px;
+  }
+}

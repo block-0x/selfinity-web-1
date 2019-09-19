@@ -1,0 +1,15 @@
+
+.bridge-new-list {
+  margin: 0% auto;
+  width: 900px;
+  @include mq-down(lg) {
+    width: 700px;
+  };
+  @include mq-down(md) {
+    width: 100%;
+  };
+  display: flex;
+  @include themify($themes) {
+    background: themed('background');
+  }
+}

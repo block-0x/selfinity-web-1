@@ -1,0 +1,46 @@
+.opinion-section-button {
+  padding: 0px 6px;
+  padding-bottom: 4px;
+  padding-right: 0px;
+  width: 100%;
+  height: 100%;
+  clear: both;
+  @include themify($themes) {
+    transition: all 0.3s ease-in-out;
+    // border-top: solid 1px themed('backgroundLight');
+    // border-bottom: solid 1px themed('backgroundLight');
+    background: themed('transparent');
+  }
+  &__user {
+    margin-top: 3px;
+    float: left;
+    margin-right: 15px;
+  }
+  &__input {
+    text-align: left;
+    height: 100%;
+    padding: 8px;
+    padding-right: 0px;
+    padding-left: 10px;
+    cursor: text;
+    width: calc(100% - 50px);
+    border-radius: 15px;
+    @include FS(FS);
+    @include FM(R);
+    // margin-bottom: 4px;
+    @include themify($themes) {
+      color: themed('backgroundThick');
+      background: darken(themed('backgroundLight'), 5%);
+    }
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    float: left;
+    // &:hover {
+    //   @include themify($themes) {
+    //     color: darken(themed('backgroundThick'), 5%);
+    //     background: darken(themed('backgroundLight'), 10%);
+    //   }
+    // }
+  }
+}

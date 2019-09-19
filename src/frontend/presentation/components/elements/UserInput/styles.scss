@@ -1,0 +1,84 @@
+.user-input {
+  @include init_wh();
+  &__field {
+    transition: all 0.3s ease-in-out;
+    padding: 3px;
+    cursor: text;
+    @include FS(S);
+    @include FM(L);
+    background-image: none;
+    border-radius: 10px !important;
+    @include themify($themes) {
+      background: themed('background');
+      color: themed('backgroundContrastLight');
+      border: 2px solid themed('complementary');
+    }
+  }
+  &__button {
+    @include FM(B);
+    @include FS(FS);
+    cursor: pointer;
+    margin-top: 4px;
+    margin-left: 8px;
+    @include default-link;
+    @include themify($themes) {
+      transition: all 0.3s ease-in-out;
+      color: themed('complementary') !important;
+    }
+    &:hover {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        color: lighten(themed('complementary'), 20%) !important;
+      }
+    }
+    display: inline-block !important;
+  }
+  &__drop-down {
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    &-item {
+      width: 240px;
+      transition: all 0.3s ease-in-out;
+      height: 44px;
+      padding: 8px;
+      @include FM(B);
+      @include FS(FS);
+      @include themify($themes) {
+        background: themed('background');
+        color: themed('backgroundContrastLight');
+      }
+      &:hover {
+        transition: all 0.3s ease-in-out;
+        @include themify($themes) {
+          background: themed('complementary');
+          color: themed('background') !important;
+        }
+      }
+      &:hover > .user-input__drop-down-item-value {
+        @include themify($themes) {
+          color: themed('background') !important;
+        }
+      }
+      &-value {
+        width: calc(100% - 60px);
+        float: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      &-score {
+        pointer-events: none;
+        width: 60px;
+        float: left;
+         @include themify($themes) {
+          color: themed('backgroundThick');
+        }
+        &:hover {
+          @include themify($themes) {
+            color: themed('background') !important;
+          }
+        }
+      }
+    }
+  }
+}

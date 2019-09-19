@@ -1,0 +1,275 @@
+.LoginForm {
+  width: 100% !important;
+  &__head {
+    @include init_wh();
+  }
+  &__titleText {
+    @include init_wh();
+    margin: 18px 0;
+  }
+  &__form {
+    width: 640px;
+    margin: 0 auto;
+    @include mq-down(md) {
+      width: 75%;
+    };
+  }
+  &__link {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    @include FM(R);
+    @include FS(FM);
+    @include themify($themes) {
+      color: themed('background');
+    }
+    &-text {
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      margin-top: 8px;
+      text-align: center;
+      text-decoration: underline;
+      display: block;
+      cursor: pointer;
+      @include FM(R);
+      @include FS(FM);
+      @include themify($themes) {
+        color: themed('background');
+      }
+    }
+  }
+  label {
+    text-transform: none;
+  }
+  form {
+    margin-top: 1.5rem;
+  }
+  &__title {
+    width: 100%;
+    text-align: center;
+    @include FM(B);
+    @include FS(L);
+    @include themify($themes) {
+      color: themed('background');
+    }
+  }
+  &__error {
+    width: 100%;
+    text-align: left;
+    @include FM(L);
+    @include FS(M);
+    @include themify($themes) {
+      color: themed('background');
+    }
+  }
+  &__head {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    text-align: center;
+    &__link {
+      @include default-link;
+      width: 100%;
+      height: 100%;
+    }
+    &__logo {
+      width: 168px;
+      height: 164px;
+      @include mq-down(md) {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 4px;
+      };
+    }
+  }
+  &__border {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    height: 1px !important;
+    width: 100%;
+    @include themify($themes) {
+      background: themed('background');
+    }
+  }
+  &__username-input-group {
+    width: 100%;
+    // margin-top: 10px;
+    &-label {
+      width: 100%;
+      margin-bottom: 5px;
+      text-align: left;
+      @include FM(L);
+      @include FS(M);
+      @include themify($themes) {
+        color: themed('background');
+      }
+      @include mq-down(md) {
+        @include FM(L);
+        @include FS(S);
+      };
+    }
+    &-placelabel {
+      @include FM(L);
+      @include FS(M);
+      @include themify($themes) {
+        color: themed('background');
+      }
+    }
+    &-field {
+      width: 100%;
+      padding: 10px;
+      margin: 4px 0;
+      @include FM(L);
+      @include FS(FM);
+      @include themify($themes) {
+        color: themed('background');
+        background: transparent;
+        border-bottom: solid 2px themed('background');
+      }
+      border: none;
+      &:-webkit-autofill {
+        @include themify($themes) {
+          -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+        }
+      }
+      &:focus {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          border-bottom: solid 2px themed('background');
+        }
+      }
+      @include mq-down(md) {
+        padding: 8px;
+        @include FM(L);
+        @include FS(S);
+      };
+    }
+  }
+  &__password-input-group {
+    margin-top: 10px;
+    width: 100%;
+    &-label {
+      width: 100%;
+      margin-bottom: 5px;
+      text-align: left;
+      @include FM(L);
+      @include FS(M);
+      @include themify($themes) {
+        color: themed('background');
+      }
+      @include mq-down(md) {
+        @include FM(L);
+        @include FS(S);
+      };
+    }
+    &-field {
+      width: 100%;
+      padding: 8px;
+      margin: 4px 0;
+      @include FM(L);
+      @include FS(FM);
+      @include themify($themes) {
+        color: themed('background');
+        background: transparent;
+        border-bottom: solid 2px themed('background');
+      }
+      border: none;
+      &:-webkit-autofill {
+        @include themify($themes) {
+          -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+        }
+      }
+      &:focus {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          border-bottom: solid 2px themed('background');
+        }
+      }
+      @include mq-down(md) {
+        padding: 8px;
+        @include FM(L);
+        @include FS(S);
+      };
+    }
+  }
+  &__login-modal-buttons {
+    height: 55px;
+    @include mq-down(md) {
+      height: 44px;
+    };
+    //padding: 0px 50px;
+  }
+  &__sign-up {
+    text-align: center;
+    margin-top: 50px;
+    height: 55px;
+    @include mq-down(md) {
+      height: 44px;
+    };
+    &-button {
+      background-color: transparent;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      font-size: 1.2rem;
+      text-transform: none;
+    }
+    &-button.hollow {
+      border: 1px solid #ddd;
+      color: $color-blue;
+      transition: 0.2s all ease-in-out;
+      @include font-size(16px);
+
+      &:hover {
+        border: 1px solid $color-black;
+        color: $color-black;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.05);
+      }
+    }
+    em {
+      @include FM(B);
+      @include FS(FM);
+      @include themify($themes) {
+        color: themed('background');
+      }
+      @include mq-down(md) {
+        @include FS(S);
+      };
+    }
+    hr {
+      @include FM(L);
+      @include FS(FM);
+      @include themify($themes) {
+        color: themed('background');
+      }
+      @include mq-down(md) {
+        @include FS(S);
+      };
+      margin: 1.75rem auto 2rem auto;
+    }
+    p {
+      @include FM(L);
+      @include FS(FM);
+      margin-bottom: 1rem;
+      @include themify($themes) {
+        color: themed('background');
+      }
+      @include mq-down(md) {
+        @include FS(S);
+      };
+    }
+  }
+  &__save-login {
+    @include FM(L);
+    @include FS(FM);
+    @include themify($themes) {
+      color: themed('background');
+    }
+    &-input {
+    }
+    margin-top: 15px;
+  }
+}
+
+.OpAction {
+  display: none;
+}

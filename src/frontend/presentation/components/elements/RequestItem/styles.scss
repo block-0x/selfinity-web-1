@@ -1,0 +1,102 @@
+
+.request-item {
+  border-radius: 8px;
+  width: 100%;
+  min-height: 164px;
+  text-align: center;
+  padding: 12px;
+  @include themify($themes) {
+    background: themed('background');
+    box-shadow: 0px 0px 4px 2px themed('shadow');
+  }
+  clear: both;
+  &__link {
+    cursor: pointer;
+    @include default-link;
+      &:hover > .request-item {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          background: darken(themed('background'), 3%) !important;
+      }
+    }
+  }
+   &__status {
+    height: 30px;
+    width: 80px;
+  }
+  &__left {
+    float: left;
+    width: calc(33% - 12px);
+    height: 100%;
+    @include mq-down(md) {
+      width: 184px;
+    };
+    &-voter {
+      width: 100%;
+      margin-bottom: 10px;
+      height: 32px !important;
+      clear: both;
+      &-image {
+        height: 44px;
+        width: 44px;
+        margin: 0 10px;
+        float: left;
+      }
+      &-name {
+        height: 44px;
+        padding: 10px;
+        text-align: left;
+        @include FM(M);
+        @include FS(FS);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        @include themify($themes) {
+          color: themed('backgroundThick');
+        }
+      }
+    }
+    &-bar {
+      width: 100%;
+      margin-bottom: 10px;
+      // padding: 0 10px;
+      height: 54px !important;
+    }
+    &-foot {
+      height: 64px;
+      width: 100%;
+    }
+  }
+  &__right {
+    float: right;
+    width: calc(70% - 12px);
+    height: 100%;
+    @include mq-down(md) {
+      width: calc(100% - 184px);
+    };
+    &-title {
+      width: 100%;
+      @include FS(FS);
+      @include FM(R);
+      @include LH(FM);
+      text-align: left;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: normal;
+      @include themify($themes) {
+        color: themed('string');
+      }
+      height: 114px;
+    }
+    &__at {
+      height: 20px;
+      width: 100%;
+    }
+  }
+  &__button {
+    width: 100%;
+    display: inline-block;
+    height: 50px;
+    padding: 5px 20px;
+  }
+}

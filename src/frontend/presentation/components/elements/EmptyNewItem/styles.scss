@@ -1,0 +1,59 @@
+
+.empty-new-item {
+  clear: both;
+  padding: 10px;
+  position: relative;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  @include themify($themes) {
+    background: themed('background');
+    box-shadow: 0px 0px 4px 2px themed('shadow');
+  }
+  &__link {
+    cursor: pointer;
+    @include default-link;
+    &:hover > .empty-new-item {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        background: darken(themed('background'), 3%) !important;
+      }
+    }
+  }
+
+  &__user {
+    margin-top: 3px;
+    float: left;
+    margin-right: 15px;
+  }
+
+  &__input {
+    text-align: left;
+    height: 100%;
+    padding: 8px;
+    padding-right: 0px;
+    padding-left: 10px;
+    cursor: text;
+    width: calc(100% - 50px);
+    // border-radius: 15px;
+    @include FS(FS);
+    @include FM(R);
+    // margin-bottom: 4px;
+    @include themify($themes) {
+      color: themed('backgroundThick');
+      // background: darken(themed('backgroundLight'), 5%);
+    }
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    float: left;
+    // &:hover {
+    //   @include themify($themes) {
+    //     color: darken(themed('backgroundThick'), 5%);
+    //     background: darken(themed('backgroundLight'), 10%);
+    //   }
+    // }
+  }
+}

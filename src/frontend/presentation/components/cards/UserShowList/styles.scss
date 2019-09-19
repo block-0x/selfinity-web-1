@@ -1,0 +1,72 @@
+
+.user-show-list {
+  width: 100% !important;
+  margin-bottom: 50vh;
+  &__nav {
+    position: relative;
+    padding: 0;
+  }
+  &__setting-menu {
+    width: 80%;
+    margin: 0 auto;
+    height: 64px;
+    @include themify($themes) {
+      border-bottom: 1px solid themed('border');
+    }
+    @include mq-down(fm) {
+      width: 100%;
+    };
+  }
+  &__introduction {
+    transition: all 0.3s ease-in-out;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    margin-bottom: 44px;
+    @include mq-down(fm) {
+      width: 100%;
+    };
+    &.none-item {
+      height: 100px;
+    }
+  }
+  &__category {
+    padding-top: 15px;
+    @include FS(FM);
+    @include FM(B);
+    @include themify($themes) {
+      color: themed('string');
+    }
+  }
+  &__head {
+    margin: 20px 0;
+    width: 100%;
+  }
+  &__header {
+    @include mq-down(sm) {
+      display: none;
+    };
+    height: 140px;
+    width: 100%;
+    &__image {
+      height: 140px;
+      width: 100%;
+    }
+  }
+  &__user{
+    text-align: center;
+    padding: 10px;
+    z-index: 10;
+    border-radius: 15px;
+    margin: 0% 45%;
+    width: 10%;
+    height: 140px;
+    @include themify($themes) {
+      background: themed('background');
+      box-shadow: 0px 0px 10px 2px themed('shadow');
+    }
+
+    &__link {
+    }
+  }
+}

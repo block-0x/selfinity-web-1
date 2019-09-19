@@ -1,0 +1,53 @@
+.token-point-section {
+  padding: 5px 16px;
+  width: 100%;
+  height: 100%;
+  clear: both;
+  @include themify($themes) {
+    transition: all 0.3s ease-in-out;
+    // border-top: solid 1px themed('backgroundLight');
+    // border-bottom: solid 1px themed('backgroundLight');
+    background: themed('transparent');
+  }
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &__image {
+    margin-right: 12px;
+  }
+  &__desc {
+    max-width: calc(220px);
+    @include FS(FS);
+    @include FM(B);
+    // margin-bottom: 4px;
+    @include themify($themes) {
+      color: themed('backgroundThick');
+    }
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    float: left;
+  }
+  &__help {
+    height: 20px;
+    width: 18px;
+    margin: 7px 8px;
+    margin-left: 0;
+  }
+  &__score {
+    max-width: calc(180px);
+    margin: 0 8px;
+    @include FS(M);
+    @include FM(B);
+    // margin-bottom: 4px;
+    @include themify($themes) {
+      color: themed('backgroundThick');
+    }
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    float: left;
+  }
+}

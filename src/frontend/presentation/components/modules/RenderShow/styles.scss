@@ -1,0 +1,64 @@
+
+.render-show {
+  @include init_wh();
+  display: flex;
+  &__left {
+    width: 65%;
+  }
+  &__right {
+    @include FS(FM);
+    @include FM(B);
+    @include themify($themes) {
+      color: themed('string');
+    }
+    margin-left: 10%;
+    width: 30%
+  }
+  &__grid {
+    width: 100% !important;
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+  &__row {
+    padding: 0px !important;
+    width: 100% !important;
+    margin: 0px !important;
+  }
+  &__col {
+    min-width: 28% !important;
+    padding: 7.5px !important;
+  }
+  &__category {
+    padding-top: 15px;
+    @include FS(FM);
+    @include FM(B);
+    @include themify($themes) {
+      color: themed('string');
+    }
+  }
+  &__header {
+    height: 140px;
+    width: 100%;
+    &__image {
+      height: 140px;
+      width: 100%;
+    }
+  }
+  &__item {
+  }
+  &__border {
+    margin: 21px 0px;
+    height: 1px;
+    width: 100%;
+    @include themify($themes) {
+      background: themed('backgroundThick');
+    }
+  }
+  &__reply {
+    height: 44px;
+    width: 100%;
+  }
+  &__relate-item {
+    margin: 8px 0px;
+  }
+}

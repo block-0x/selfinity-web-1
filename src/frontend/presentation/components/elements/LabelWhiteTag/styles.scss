@@ -1,0 +1,41 @@
+.label-white-tag {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  margin: 10px 04;
+  @include themify($themes) {
+    background: themed('background');
+    box-shadow: 0px 0px 4px 2px themed('shadow');
+  }
+  &__link {
+    cursor: pointer;
+    @include default-link;
+    &:hover > .label-white-tag {
+      transition: all 0.3s ease-in-out;
+      @include themify($themes) {
+        background: themed('base') !important;
+        // box-shadow: 0px 0px 4px 2px themed('base') !important;
+      }
+      & > .label-white-tag__title {
+        transition: all 0.3s ease-in-out;
+        @include themify($themes) {
+          color: themed('background') !important;
+        }
+      }
+    }
+  }
+  &__title {
+    @include FS(FM);
+    @include FM(M);
+    text-align: center;
+    padding: 4px 14px;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+    @include themify($themes) {
+      transition: all 0.3s ease-in-out;
+      color: themed('backgroundThick');
+    }
+  }
+}

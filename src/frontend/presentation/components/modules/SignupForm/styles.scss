@@ -1,0 +1,253 @@
+.SignupForm {
+  width: 100% !important;
+  &__head {
+    @include init_wh();
+  }
+  &__titleText {
+    @include init_wh();
+  }
+  &__form {
+    width: 640px;
+    margin: 0 auto;
+    @include mq-down(md) {
+      width: 75%;
+    };
+  }
+  label {
+    text-transform: none;
+  }
+  form {
+    margin-top: 1.5rem;
+  }
+  &__title {
+    width: 100%;
+    margin: 14px 0;
+    text-align: center;
+    @include FM(B);
+    @include FS(L);
+    @include themify($themes) {
+      color: themed('background');
+    }
+  }
+  &__detail {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    @include FM(R);
+    @include FS(FM);
+    @include themify($themes) {
+      color: themed('background');
+    }
+    &-link {
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      margin-top: 8px;
+      text-align: center;
+      text-decoration: underline;
+      display: block;
+      cursor: pointer;
+      @include FM(R);
+      @include FS(FM);
+      @include themify($themes) {
+        color: themed('background');
+      }
+    }
+  }
+  &__error {
+    width: 100%;
+    text-align: left;
+    @include FM(L);
+    @include FS(M);
+    @include themify($themes) {
+      color: themed('background');
+    }
+  }
+  &__head {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    text-align: center;
+    &__link {
+      @include default-link;
+      width: 100%;
+      height: 100%;
+    }
+    &__logo {
+      width: 168px;
+      height: 164px;
+      @include mq-down(md) {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 4px;
+      };
+    }
+  }
+  &__border {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    height: 1px !important;
+    width: 100%;
+    @include themify($themes) {
+      transition: all 0.3s ease-in-out;
+      background: themed('background');
+    }
+  }
+  &__text-input {
+    // margin: 0px 5px;
+    // margin-top: 10px;
+    &__label {
+      width: 100%;
+      margin-bottom: 5px;
+      text-align: left;
+      @include FM(L);
+      @include FS(M);
+      @include themify($themes) {
+        color: themed('background');
+      }
+      @include mq-down(md) {
+        @include FM(L);
+        @include FS(S);
+      };
+    }
+    &-placelabel {
+      @include FM(L);
+      @include FS(M);
+      @include themify($themes) {
+        color: themed('background');
+      }
+    }
+    &-group {
+      margin-bottom: 5px;
+      &-field {
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+        padding: 10px;
+        margin: 4px 0;
+        @include FM(L);
+        @include FS(FM);
+        @include themify($themes) {
+          color: themed('background');
+          background: transparent;
+          border-bottom: solid 2px themed('background');
+        }
+        border: none;
+        &:-webkit-autofill {
+          @include themify($themes) {
+            -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+          }
+        }
+        &:focus {
+          @include themify($themes) {
+            transition: all 0.3s ease-in-out;
+            border-bottom: solid 2px themed('background');
+          }
+        }
+        @include mq-down(md) {
+          padding: 8px;
+          @include FM(L);
+          @include FS(S);
+        };
+      }
+      &-error {
+        @include FM(L);
+        @include FS(M);
+        @include themify($themes) {
+          color: themed('alert');
+        }
+      }
+    }
+  }
+  &__buttons {
+    height: 100%;
+    width: 100%;
+    margin-top: 5vh;
+    @include mq-down(md) {
+      margin-top: 20px;
+    };
+  }
+  &__button {
+    width: 100%;
+    height: 55px;
+    margin: 25px 0px;
+    @include mq-down(md) {
+      height: 44px;
+    };
+  }
+  &__login-modal{
+    text-align: center;
+    width: 100%;
+    @include FM(L);
+    @include FS(M);
+    @include themify($themes) {
+      color: themed('background');
+    }
+  }
+  &__save-login {
+    @include FM(L);
+    @include FS(FM);
+    @include themify($themes) {
+      color: themed('background');
+    }
+    &-input {
+    }
+    margin-top: 15px;
+  }
+  &__clearfix {
+    clear: both;
+  }
+  &__drop-down {
+    width: 100%;
+    &-item {
+      transition: all 0.3s ease-in-out;
+      height: 44px;
+      padding: 10px;
+      @include FM(M);
+      @include FS(FS);
+      @include themify($themes) {
+        background: themed('background');
+        color: themed('backgroundContrastLight');
+      }
+      &:hover {
+        transition: all 0.3s ease-in-out;
+        @include themify($themes) {
+          background: themed('complementary');
+          color: themed('background');
+        }
+      }
+    }
+  }
+  &__term {
+    // min-height: 50px;
+    padding: 8px 0px;
+    clear: both;
+    @include FS(FS);
+    @include FM(L);
+    @include themify($themes) {
+      color: themed('background');
+    }
+    &-input {
+      max-width: 232px;
+      float: left;
+      min-height: 50px;
+      margin-right: 8px;
+    }
+    &-value {
+      // float: left;
+      padding: 0px 10px;
+      text-decoration: underline;
+      cursor: pointer;
+      @include FS(FS);
+      @include FM(L);
+      @include themify($themes) {
+        color: themed('background');
+      }
+    }
+  }
+}
+
+.OpAction {
+  display: none;
+}
+#button_login {
+  margin-top: 22px;
+}

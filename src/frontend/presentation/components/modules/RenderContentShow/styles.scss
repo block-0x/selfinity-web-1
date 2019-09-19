@@ -1,0 +1,174 @@
+
+.render-content-show {
+  @include init_wh();
+  margin-bottom: 50vh;
+  &__header {
+    height: 20vw;
+  }
+  &__ad {
+    margin: 0px auto;
+    margin-top: 24px;
+    width: 300px;
+    height: 250px;
+  }
+  &__relates {
+    &-title {
+      margin-top: 8px;
+      margin-left: 16px;
+      @include FS(S);
+      @include FM(B);
+      @include themify($themes) {
+        color: themed('string');
+      }
+    }
+  }
+  &__root {
+    width: 100%;
+    height: 44px;
+    padding: 8px 0;
+    text-align: center;
+    &-link {
+      text-align: center;
+      @include themify($themes) {
+        color: themed('complementary');
+      }
+      @include FM(R);
+      @include FS(FM);
+      cursor: pointer;
+      @include default-link;
+      &:hover {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          color: lighten(themed('complementary'), 20%) !important;
+        }
+      }
+    }
+  }
+  &__body {
+    @include init_wh();
+    display: flex;
+  }
+  &__left {
+    min-width: 300px;
+    width: 70%;
+    @include mq-down(lg) {
+      width: 100%;
+    };
+  }
+  &__right {
+    margin: 0 20px;
+    min-width: 300px;
+    width: 30%;
+    @include mq-down(lg) {
+      display: none;
+    };
+  }
+  &__category {
+    padding-top: 15px;
+    @include FS(FM);
+    @include FM(B);
+    @include themify($themes) {
+      color: themed('string');
+    }
+  }
+  &__item {
+  }
+  &__requests {
+    @include themify($themes) {
+      border-bottom: solid 1px themed('border');
+    }
+  }
+  &__request-section {
+    height: 54px;
+    width: 100%;
+  }
+  &__request {
+    max-width: 620px;
+    @include mq-up(lg) {
+      margin: 22px auto;
+    };
+    @include mq-down(lg) {
+      margin: 0 auto;
+      padding: 22px 0px;
+    };
+    &-items {
+      @include mq-down(lg) {
+        width: 696px;
+        margin-left: auto;
+        margin-right: auto;
+      };
+      @include mq-down(md) {
+        max-width: 420px;
+        width: 90%;
+      };
+    }
+  }
+  &__border {
+    margin: 21px 0px;
+    height: 1px;
+    width: 100%;
+    @include themify($themes) {
+      background: themed('backgroundThick');
+    }
+  }
+  &__content {
+    // margin-bottom: 44px;
+  }
+  &__user {
+    height: 64px;
+    width: 100%;
+  }
+  &__reply {
+    height: 64px;
+    width: 100%;
+  }
+  &__reply-section {
+    height: 54px;
+    width: 100%;
+  }
+  &__relate-item {
+    margin: 8px 0px;
+  }
+  &__empty-opinion {
+    height: 64px;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq-down(lg) {
+      width: 620px;
+    };
+    @include mq-down(md) {
+      max-width: 420px;
+      width: 95%;
+    };
+    margin-top: 34px;
+  }
+  &__children {
+    @include mq-down(lg) {
+      width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    };
+    @include mq-down(md) {
+      max-width: 420px;
+      width: 95%;
+    };
+  }
+  &__child {
+    max-width: 620px;
+    @include mq-up(lg) {
+      margin: 22px auto;
+    };
+    @include mq-down(lg) {
+      margin: 0 auto;
+      padding: 22px 0px;
+    };
+    @include mq-down(md) {
+      padding: 8px 0px;
+    };
+  }
+}
+
+.rrender-content-show__relates {
+  max-width: 620px;
+}

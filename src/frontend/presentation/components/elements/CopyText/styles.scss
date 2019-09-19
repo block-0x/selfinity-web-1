@@ -1,0 +1,44 @@
+.copy-text {
+  position: relative;
+  &__value {
+    margin: 0 4px;
+    @include FM(B);
+    @include FS(FM);
+    @include themify($themes) {
+      color: themed('backgroundContrastLight');
+    }
+  }
+  &__icon {
+    cursor: pointer;
+    margin: 0 4px;
+    padding: 4px;
+    text-decoration: none !important;
+    @include svg-set() {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        stroke: themed('backgroundThick') !important;
+        fill: themed('backgroundThick')!important;
+      }
+    }
+    &-link {
+      cursor: pointer;
+      &:hovor > .copy-text__icon {
+        @include svg-set() {
+          @include themify($themes) {
+            transition: all 0.3s ease-in-out;
+            stroke: lighten(themed('backgroundThick'), 10%) !important;
+            fill: lighten(themed('backgroundThick'), 10%) !important;
+          }
+        }
+      }
+    }
+  }
+  &__toast {
+    margin: 0 4px;
+    @include FM(L);
+    @include FS(FS);
+    @include themify($themes) {
+      color: themed('success');
+    }
+  }
+}

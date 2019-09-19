@@ -1,0 +1,37 @@
+
+.request-bar {
+  height: 100%;
+  position: relative;
+  padding: 10px 0px;
+  clear: both;
+  @include init_wh();
+  &__voter {
+    float: left;
+    &-image {
+      margin: 0 4px;
+      width: 40px;
+      height: 40px;
+      float: left;
+      margin-right: 4px;
+    }
+    &-title {
+      float: left;
+      text-align: left;
+      width: 120px;
+      @include FM(M);
+      @include FS(FS);
+      @include themify($themes) {
+        color: themed('backgroundContrastLight');
+      }
+    }
+  }
+  &__item {
+    @include FM(M);
+    @include FS(FS);
+    float: left;
+    margin: 4px;
+    @include themify($themes) {
+      color: themed('backgroundThick');
+    }
+  }
+}

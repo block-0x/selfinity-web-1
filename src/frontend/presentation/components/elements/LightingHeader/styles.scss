@@ -1,0 +1,205 @@
+.lighting-header {
+  @include init_wh();
+  &__left {
+    width: 50%;
+    height: 240px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    @include mq-up(md) {
+      height: 280px;
+    };
+    @include mq-up(xxl) {
+      height: 400px;
+    };
+    @include mq-down(fm) {
+      display: none;
+    };
+    &-image {
+      width: 240px;
+      margin-left: auto;
+      margin-right: 44px;
+      height: 240px;
+      display: block;
+      @include mq-up(md) {
+        width: 280px;
+        height: 280px;
+      };
+      @include mq-up(xxl) {
+        width: 400px;
+        height: 400px;
+      };
+      @include mq-down(md) {
+        width: 220px;
+        height: 220px;
+      };
+    }
+  }
+  &__right {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 50%;
+    height: 300px;
+    @include mq-up(md) {
+      height: 280px;
+    };
+    @include mq-up(xxl) {
+      height: 400px;
+    };
+    @include mq-down(fm) {
+      width: 90%;
+      margin: 0 auto;
+      height: 100%;
+      display: block;
+    };
+    &-image {
+      width: 167px;
+      height: 40px;
+      display: block;
+      margin: 12px auto;
+      padding-right: 44px;
+      @include mq-up(xxl) {
+        padding-right: 0px;
+        width: 183px;
+        height: 60px;
+      };
+      @include mq-down(fm) {
+        padding-right: 0px;
+        width: 90px;
+        height: 30px;
+        margin: 4px auto;
+      };
+      // margin-bottom: 44px;
+    }
+    &-texts {
+      padding-left: 8px;
+      @include mq-down(fm) {
+        padding-left: 0px;
+      };
+      &__desc {
+        display: block;
+        word-wrap: break-word;
+        white-space: pre;
+        @include FM(B);
+        @include FS(M);
+        text-align: left;
+        display: inline-block;
+        height: 32px;
+        margin-bottom: 8px;
+        vertical-align: left;
+        margin-right: 50%;
+        @include themify($themes) {
+          color: themed('backgroundContrastLight');
+          border-bottom: solid 8px themed('base');
+        }
+        @include mq-up(md) {
+          @include FS(XM);
+          height: 36px;
+          margin-bottom: 4px;
+        };
+        @include mq-up(xxl) {
+          @include FS(L);
+          height: 40px;
+          margin-bottom: 12px;
+        };
+        @include mq-down(fm) {
+          display: none;
+          @include FS(FM);
+          height: 24px;
+          margin-bottom: 8px;
+          text-align: center;
+          margin-right: 45%;
+          margin-left: 5%;
+          @include themify($themes) {
+            border-bottom: solid 5px themed('base');
+          }
+        };
+      }
+      &__descs {
+        display: block;
+        @include FM(B);
+        @include FS(S);
+        @include themify($themes) {
+          color: themed('backgroundContrastLight');
+          border-bottom: solid 3px themed('base');
+        }
+        @include mq-up(fm) {
+          display: none;
+        }
+        @include mq-down(fm) {
+          @include FS(S);
+          padding-bottom: 4px;
+          text-align: center;
+        };
+      }
+      &__title {
+        line-height: 1;
+        display: block;
+        word-wrap: normal;
+        margin: 0;
+        margin-top: 4px;
+        @include FM(B);
+        @include FS(M);
+        text-align: left;
+        min-width: 282px;
+        @include themify($themes) {
+          color: themed('base');
+        }
+        @include mq-up(md) {
+          @include FS(XM);
+          min-width: 287px;
+        };
+        @include mq-up(xxl) {
+          @include FS(L);
+        };
+        @include mq-down(fm) {
+          text-align: center;
+          @include FS(M);
+          margin: 8px 0;
+          min-width: 0px;
+          // margin-left: 5%;
+          // min-width: 360px;
+        };
+      }
+    }
+    &-foot {
+      @include mq-up(fm) {
+        display: none;
+      }
+      @include mq-down(fm) {
+        @include FS(FM);
+        width: 220px;
+        height: 220px;
+        display: block;
+        margin: 0 auto;
+      };
+      &__image {
+        @include mq-up(fm) {
+          display: none;
+        }
+        @include mq-down(fm) {
+          @include FS(FM);
+          width: 220px;
+          height: 220px;
+          display: block;
+          margin: 0 auto;
+        };
+      }
+    }
+  }
+  &__link {
+    cursor: pointer;
+    @include default-link;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline !important;
+    display: block;
+    @include FM(R);
+    @include FS(S);
+    @include themify($themes) {
+      color: themed('complementary');
+    }
+  }
+}

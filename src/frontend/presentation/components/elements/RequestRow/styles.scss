@@ -1,0 +1,95 @@
+.request-row {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 15px;
+  @include themify($themes) {
+    background: themed('background');
+    box-shadow: 0px 0px 4px 2px themed('shadow');
+  }
+  &__link {
+    // cursor: pointer;
+    @include default-link;
+    // &:hover > .request-row {
+    //   @include themify($themes) {
+    //     transition: all 0.3s ease-in-out;
+    //     background: darken(themed('background'), 5%) !important;
+    //   }
+    // }
+  }
+
+  &__status {
+    height: 20px;
+    width: 80px;
+  }
+  &__at {
+    margin-top: 16px;
+    margin-left: 8px;
+    height: 20px;
+    width: 100%;
+  }
+  &__button {
+    margin: 16px auto;
+    width: 100%;
+    height: 44px;
+  }
+  &__title {
+    @include FS(FS);
+    @include FM(R);
+    @include LH(FM);
+    text-align: left;
+    padding: 12px 12px;
+    white-space: normal;
+    @include themify($themes) {
+      color: themed('string');
+    }
+  }
+
+  &__border {
+    height: 1px !important;
+    width: calc(100% - 20px);
+    margin: 0px 10px;
+    @include themify($themes) {
+      background: themed('border');
+    }
+  }
+  &__body {
+    padding: 12px 0px;
+    @include FS(FM);
+    @include LH(FM);
+    @include FM(M);
+    @include init_wh();
+    @include themify($themes) {
+      color: themed('backgroundContrastLight');
+    }
+    @include mq-down(fm) {
+      @include FS(S);
+      @include LH(FM);
+    };
+  }
+
+  &__labels {
+    width: 100%;
+    margin-top: 10px;
+    padding: 0 10px;
+    height: 44px !important;
+  }
+
+  &__user {
+    width: 100%;
+    height: 32px;
+    margin-top: 10px;
+  }
+
+  &__token {
+    width: 100%;
+    height: 44px;
+    margin-top: 10px;
+  }
+
+  &__foot {
+    height: 65px;
+  }
+}
+

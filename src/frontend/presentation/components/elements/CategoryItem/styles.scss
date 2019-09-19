@@ -1,0 +1,13 @@
+.category-item {
+  width: 100%;
+  height: 100%;
+  &__string {
+    // margin-top: 15px;
+    // padding-top: 15px;
+    @include FS(S);
+    @include FM(B);
+    @include themify($themes) {
+      color: themed('backgroundContrastLight');
+    }
+  }
+}

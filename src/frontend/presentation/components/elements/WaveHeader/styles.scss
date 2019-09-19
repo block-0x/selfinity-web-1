@@ -1,0 +1,19 @@
+.wave-header {
+  width: 100%;
+  height: 140px;
+  @include mq-down(fm) {
+    height: 110px;
+  };
+  &__image {
+    width: 100%;
+    height: 140px;
+    @include mq-down(md) {
+      height: 110px;
+      margin-bottom: 30px;
+    };
+    @include mq-down(fm) {
+      height: 110px;
+      margin-bottom: 0px;
+    };
+  }
+}

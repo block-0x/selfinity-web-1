@@ -1,0 +1,82 @@
+
+.side-item {
+    padding: 12px 25px;
+    // height: 100%;
+    text-align: center;
+    clear: both;
+    @include themify($themes) {
+      background: themed('backgroundLight');
+    }
+    &__link {
+      @include default-link;
+      &:hover > .side-item {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          background: themed('base');
+        }
+        & > .side-item__image svg g polygon {
+          @include themify($themes) {
+            stroke: themed('background') !important;
+            fill: themed('background')!important;
+          }
+        }
+        & > .side-item__image svg g path {
+          @include themify($themes) {
+            stroke: themed('background') !important;
+            fill: themed('background')!important;
+          }
+        }
+        & > .side-item__value {
+          @include themify($themes) {
+            color: themed('background');
+          }
+        }
+      }
+      &.active > .side-item {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          background: themed('background');
+        }
+        & > .side-item__image svg g polygon {
+          @include themify($themes) {
+            stroke: themed('base') !important;
+            fill: themed('base')!important;
+          }
+        }
+        & > .side-item__image svg g path {
+          @include themify($themes) {
+            stroke: themed('base') !important;
+            fill: themed('base')!important;
+          }
+        }
+        & > .side-item__value {
+          @include themify($themes) {
+            color: themed('base');
+          }
+        }
+      }
+    }
+    &__image {
+      text-decoration: none !important;
+      width: 24px;
+      height: 24px;
+      margin-right: 24px;
+      margin-left: 24px;
+      float: left;
+      @include svg-set() {
+        @include themify($themes) {
+          stroke: themed('backgroundThick') !important;
+          fill: themed('backgroundThick') !important;
+        }
+      }
+    }
+    &__value {
+      display: inline;
+      @include FS(FM);
+      @include FM(R);
+      text-decoration: none !important;
+      @include themify($themes) {
+          color: themed('backgroundThick');
+      }
+    }
+}

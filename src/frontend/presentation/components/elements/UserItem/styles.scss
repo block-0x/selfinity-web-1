@@ -1,0 +1,64 @@
+.user-item {
+  position: relative;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  @include themify($themes) {
+    background: themed('background');
+    box-shadow: 0px 0px 4px 2px themed('shadow');
+  }
+  &__picture {
+    height: 64px;
+    width: 64px;
+    margin: 0px auto;
+    padding: 10px;
+  }
+  &__border {
+    height: 1px !important;
+    width: calc(100% - 20px);
+    margin: 0px 10px;
+    @include themify($themes) {
+      background: themed('border');
+    }
+  }
+  &__title {
+    display: block;
+    line-height: 1;
+    margin: 0;
+    @include FS(FM);
+    @include FM(B);
+    text-align: center;
+    padding: 12px 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @include themify($themes) {
+      color: themed('string');
+    }
+  }
+  &__body {
+    text-align: left;
+    padding: 12px;
+    max-height: 235px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @include FS(FS);
+    @include LH(FS);
+    @include FM(R);
+    @include themify($themes) {
+      color: themed('string');
+    }
+  }
+  &__link {
+    cursor: pointer;
+    @include default-link;
+      &:hover > .user-item {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          background: darken(themed('background'), 5%) !important;
+      }
+    }
+  }
+}

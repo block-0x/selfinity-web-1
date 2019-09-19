@@ -1,0 +1,60 @@
+
+.side-bar {
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  @include themify($themes) {
+    background: themed('backgroundLight');
+  }
+  &__items {
+    // height: 100%;
+    padding: 24px 0px;
+    transition: all 0.3s ease-in-out;
+    @include themify($themes) {
+      background: themed('backgroundLight');
+    }
+  }
+  &__item {
+    height: 50px;
+    transition: all 0.3s ease-in-out;
+    @include themify($themes) {
+      background: themed('backgroundLight');
+    }
+  }
+  &__trip {
+    height: 40px;
+    transition: all 0.3s ease-in-out;
+  }
+  &__border {
+    margin: 20px 0px;
+    height: 1px !important;
+    width: 100%;
+    @include themify($themes) {
+      background: themed('backgroundThick');
+    }
+  }
+  &__calendar {
+    padding: 0px 10px 0px 20px;
+    height: 15vh;
+    text-align: center;
+  }
+  &__grid {
+    padding: 0 15px;
+    &-item {
+      transition: all 0.3s ease-in-out;
+      // @include default-link;
+      @include FM(L);
+      font-size: 12px;
+      margin: 4px;
+      text-decoration: underline;
+      cursor: pointer;
+      @include themify($themes) {
+        color: themed('backgroundThick');
+      }
+      &:hover {
+        @include themify($themes) {
+          color: darken(themed('backgroundThick'), 5%);
+        }
+      }
+    }
+  }
+}

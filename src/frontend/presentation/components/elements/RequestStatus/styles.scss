@@ -1,0 +1,44 @@
+.request-status {
+  &-accepted {
+    @include FS(S);
+    @include FM(B);
+    text-align: center;
+    border-radius: 15px;
+    padding: 2px 10px;
+    white-space: nowrap;
+    @include themify($themes) {
+      color: themed('background');
+    }
+    @include themify($themes) {
+      background: themed('success');
+    }
+  }
+  &-unsolved {
+    @include FS(S);
+    @include FM(B);
+    text-align: center;
+    border-radius: 15px;
+    padding: 2px 10px;
+    white-space: nowrap;
+    @include themify($themes) {
+      color: themed('background');
+    }
+    @include themify($themes) {
+      background: themed('complementary');
+    }
+  }
+  &-unaccepted {
+    @include FS(S);
+    @include FM(B);
+    text-align: center;
+    border-radius: 15px;
+    padding: 2px 10px;
+    white-space: nowrap;
+    @include themify($themes) {
+      color: themed('background');
+    }
+    @include themify($themes) {
+      background: themed('danger');
+    }
+  }
+}

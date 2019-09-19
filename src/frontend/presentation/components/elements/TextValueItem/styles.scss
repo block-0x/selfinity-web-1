@@ -1,0 +1,61 @@
+.text-value-item {
+  @include init_wh();
+  padding: 20px 0px;
+  text-align: center;
+  clear: both;
+  @include themify($themes) {
+    background: themed('background');
+  }
+  &__title {
+    max-width: 50%;
+    text-align: left;
+    float: left;
+    display: inline;
+    // margin-left: 48px;
+    @include FS(FM);
+    @include FM(M);
+    text-decoration: none !important;
+    @include themify($themes) {
+        color: themed('backgroundThick');
+    }
+  }
+  &__value {
+    display: inline;
+    float: right;
+    text-align: right;
+    // margin-right: 48px;
+    @include FS(FM);
+    @include FM(B);
+    text-decoration: none !important;
+    @include themify($themes) {
+        color: themed('backgroundContrastLight');
+    }
+  }
+  // &__link {
+  //   cursor: pointer;
+  //   @include default-link;
+  //   &:hover > .setting-menu-item {
+  //     @include themify($themes) {
+  //       transition: all 0.3s ease-in-out;
+  //       background: themed('base');
+  //     }
+  //     & > .setting-menu-item__image svg g polygon {
+  //       @include themify($themes) {
+  //         stroke: themed('background') !important;
+  //         fill: themed('background')!important;
+  //       }
+  //     }
+  //     & > .setting-menu-item__image svg g path {
+  //       @include themify($themes) {
+  //         stroke: themed('background') !important;
+  //         fill: themed('background')!important;
+  //       }
+  //     }
+  //     & > .setting-menu-item__title {
+  //       @include themify($themes) {
+  //         color: themed('background');
+  //       }
+  //     }
+  //   }
+  // }
+}

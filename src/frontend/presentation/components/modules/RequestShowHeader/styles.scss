@@ -1,0 +1,78 @@
+
+.request-show-header {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    @include themify($themes) {
+      background: themed('background');
+      // box-shadow: 0px 0px 10px 2px themed('shadow');
+    }
+  &__link {
+    @include default-link;
+      &:hover > .request-show-item {
+        @include themify($themes) {
+          border-radius: 15px;
+          transition: all 0.3s ease-in-out;
+          box-shadow: 0px 0px 10px 2px themed('complementary');
+      }
+    }
+  }
+
+  &__title {
+    @include FS(XL);
+    @include FM(B);
+    text-align: center;
+    height: 100%;
+    padding: 8px 0px;
+    @include themify($themes) {
+      color: themed('string');
+    }
+  }
+
+  &__border {
+    height: 1px !important;
+    width: calc(100% - 20px);
+    margin: 0px 10px;
+    @include themify($themes) {
+      background: themed('border');
+    }
+  }
+  &__body {
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+    clear: both;
+    width: 100%;
+    @include FS(S);
+    @include FM(L);
+    @include themify($themes) {
+      color: themed('string');
+    }
+    &__image {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      float: left;
+      @include themify($themes) {
+        box-shadow: 0px 0px 10px 2px themed('shadow');
+      }
+      &__link {
+        @include default-link;
+          &:hover > .request-show-header__body__image {
+            @include themify($themes) {
+              box-shadow: 0px 0px 10px 2px themed('complementary');
+          }
+        }
+      }
+    }
+     &__coin {
+      float: left;
+      margin: 0px 5px;
+      @include FS(M);
+      @include FM(M);
+        @include themify($themes) {
+        color: themed('string');
+      }
+    }
+  }
+}

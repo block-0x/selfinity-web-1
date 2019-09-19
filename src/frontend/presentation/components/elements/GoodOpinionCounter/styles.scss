@@ -1,0 +1,162 @@
+// Name good-opinion-counter-size
+// Desc
+// Return
+@mixin good-opinion-counter-size() {
+  .S & {
+    clear: both;
+    height: 20px;
+    &__link {
+      cursor: pointer;
+      @include default-link;
+      &:hover > .good-opinion-counter__image {
+        transition: all 0.3s ease-in-out;
+        @include opacity(1);
+        &.active {
+          @include opacity(.8);
+        }
+        // @include svg-set() {
+        //   @include themify($themes) {
+        //     transition: all 0.3s ease-in-out;
+        //     stroke: lighten(themed('sub'), 20%) !important;
+        //     fill: lighten(themed('sub'), 20%)!important;
+        //   }
+        // }
+      }
+    }
+    &__image {
+      float: left;
+      transition: all 0.3s ease-in-out;
+      @include opacity(.8);
+      &.active {
+        @include opacity(1.0);
+      }
+      // @include svg-set() {
+      //   @include themify($themes) {
+      //     transition: all 0.3s ease-in-out;
+      //     stroke: themed('sub') !important;
+      //     fill: themed('sub')!important;
+      //   }
+      // }
+    }
+    &__score {
+      height: 20px;
+      padding: 10px 0px;
+      float: left;
+      margin-left: 4px;
+      @include FM(R);
+      @include FS(S);
+      line-height: 0 !important;
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        color: themed('sub');
+      }
+    }
+    @content;
+  }
+  .M & {
+    clear: both;
+    height: 30px;
+    &__link {
+      cursor: pointer;
+      @include default-link;
+      &:hover > .good-opinion-counter__image {
+        transition: all 0.3s ease-in-out;
+        @include opacity(1);
+        &.active {
+          @include opacity(.8);
+        }
+        // @include svg-set() {
+        //   @include themify($themes) {
+        //     transition: all 0.3s ease-in-out;
+        //     stroke: lighten(themed('sub'), 20%) !important;
+        //     fill: lighten(themed('sub'), 20%)!important;
+        //   }
+        // }
+      }
+    }
+    &__image {
+      float: left;
+      transition: all 0.3s ease-in-out;
+      @include opacity(.8);
+      &.active {
+        @include opacity(1.0);
+      }
+      // @include svg-set() {
+      //   @include themify($themes) {
+      //     transition: all 0.3s ease-in-out;
+      //     stroke: themed('sub') !important;
+      //     fill: themed('sub')!important;
+      //   }
+      // }
+    }
+    &__score {
+      height: 100%;
+      padding: 15px 0px;
+      float: left;
+      margin-left: 6px;
+      @include FM(R);
+      @include FS(FM);
+      line-height: 0 !important;
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        color: themed('sub') !important;
+      }
+    }
+    @content;
+  }
+  .L & {
+    clear: both;
+    height: 44px;
+    &__link {
+      cursor: pointer;
+      @include default-link;
+      &:hover > .good-opinion-counter__image {
+        transition: all 0.3s ease-in-out;
+        @include opacity(1);
+        &.active {
+          @include opacity(.8);
+        }
+        // @include svg-set() {
+        //   @include themify($themes) {
+        //     transition: all 0.3s ease-in-out;
+        //     stroke: lighten(themed('sub'), 20%) !important;
+        //     fill: lighten(themed('sub'), 20%)!important;
+        //   }
+        // }
+      }
+    }
+    &__image {
+      float: left;
+      transition: all 0.3s ease-in-out;
+      @include opacity(.8);
+      &.active {
+        @include opacity(1.0);
+      }
+      // @include svg-set() {
+      //   @include themify($themes) {
+      //     transition: all 0.3s ease-in-out;
+      //     stroke: themed('sub') !important;
+      //     fill: themed('sub')!important;
+      //   }
+      // }
+    }
+    &__score {
+      height: 100%;
+      padding: 15px 0px;
+      float: left;
+      margin-left: 6px;
+      @include FM(B);
+      @include FS(M);
+      line-height: 0 !important;
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        color: themed('sub') !important;
+      }
+    }
+    @content;
+  }
+}
+
+.good-opinion-counter {
+  @include good-opinion-counter-size();
+}

@@ -1,0 +1,45 @@
+.index-bar {
+  @include init_wh();
+  padding: 10px 16px;
+  clear: both;
+  &__item {
+    float: left;
+    margin-right: 8px;
+    &__name {
+      padding-top: 4px;
+      text-align: left;
+      max-width: 45%;
+      @include FM(M);
+      @include FS(FS);
+      float: left;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      @include themify($themes) {
+        color: themed('backgroundThick');
+      }
+    }
+    &__dot {
+      padding-top: 4px;
+      text-align: left;
+      @include FM(M);
+      @include FS(FS);
+      float: left;
+      @include themify($themes) {
+        color: themed('backgroundThick');
+      }
+    }
+    &__time {
+      text-align: left;
+      @include FM(M);
+      @include FS(FS);
+      float: left;
+      @include themify($themes) {
+        color: themed('backgroundThick');
+      }
+    }
+  }
+  &__menu {
+    float: right;
+  }
+}

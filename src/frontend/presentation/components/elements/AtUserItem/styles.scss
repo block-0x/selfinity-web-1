@@ -1,0 +1,70 @@
+.at-user-item {
+  padding: 5px 20px;
+  width: 100%;
+  height: 100%;
+  clear: both;
+  @include themify($themes) {
+    transition: all 0.3s ease-in-out;
+    // border-top: solid 1px themed('backgroundLight');
+    // border-bottom: solid 1px themed('backgroundLight');
+    background: themed('background');
+  }
+  &__left {
+    float: left;
+    cursor: pointer;
+    &-image {
+      float: left;
+      margin-right: 15px;
+    }
+    &-titles {
+      float: left;
+    }
+    &-title {
+      @include FS(FM);
+      @include FM(M);
+      // margin-bottom: 4px;
+      @include themify($themes) {
+        color: themed('string');
+      }
+    }
+    &-score {
+      @include FS(S);
+      @include FM(M);
+      @include themify($themes) {
+        color: themed('backgroundThick');
+      }
+      display: inline;
+      overflow: hidden;
+      white-space: nowrap;
+      width: calc(100% - 72px);
+      text-overflow: ellipsis;
+      &__title {
+        @include FS(S);
+        @include FM(FM);
+        @include themify($themes) {
+          color: themed('backgroundThick');
+        }
+        margin-right: 4px;
+        float: left;
+      }
+      &__value {
+        @include FS(S);
+        @include FM(M);
+        float: left;
+        @include themify($themes) {
+          color: themed('backgroundThick');
+        }
+      }
+    }
+  }
+  &__right {
+    float: right;
+    height: 100%;
+    &-button {
+      width: 160px;
+      height: 40px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}

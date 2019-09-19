@@ -1,0 +1,53 @@
+
+.content-header {
+  border-radius: 15px;
+  width: 100%;
+  // margin: 25% 0;
+  height: 50%;
+  text-align: center;
+  @include themify($themes) {
+    background: themed('background');
+    box-shadow: 0px 0px 0px 1px themed('shadow');
+  }
+  &__link {
+    cursor: pointer;
+    @include default-link;
+    &:hover > .content-header {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        background: darken(themed('background'), 5%) !important;
+      }
+    }
+  }
+  &__title {
+    @include FS(FL);
+    @include FM(B);
+    text-align: center;
+    padding: 12px 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @include themify($themes) {
+      color: themed('string');
+    }
+  }
+
+  &__border {
+    height: 1px !important;
+    width: calc(100% - 20px);
+    margin: 0px 10px;
+    @include themify($themes) {
+      background: themed('border');
+    }
+  }
+  &__button {
+    margin: 50px 30%;
+    height: 40px;
+    width: 40%;
+  }
+  &__foot {
+    height: 65px;
+    margin: 0 20%;
+    width: 60%;
+  }
+}

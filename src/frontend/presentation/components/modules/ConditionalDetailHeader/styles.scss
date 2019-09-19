@@ -1,0 +1,35 @@
+.conditional-detail-header {
+  @include init_wh();
+  position: relative;
+  &__header {
+    @include mq-down(sm) {
+      display: none;
+    };
+    height: 140px;
+    width: 100%;
+    &__image {
+      height: 140px;
+      width: 100%;
+    }
+  }
+  &__item {
+    width: 536px;
+    min-height: 300px;
+    margin: 0 auto;
+    margin-top: 44px;
+    @include mq-down(fm) {
+      width: calc(100% - 16px);
+      margin: 8px;
+    };
+  }
+  &__content {
+    width: 80%;
+    @include mq-up(lg) {
+      width: 700px;
+    };
+    // min-width: 450px;
+    // min-height: 300px;
+    margin: 0 auto;
+    margin-top: 44px;
+  }
+}

@@ -1,0 +1,74 @@
+
+.content-show-list {
+  width: 100% !important;
+  &__grid {
+    width: 100% !important;
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+  &__row {
+    padding: 0px !important;
+    width: 100% !important;
+    margin: 0px !important;
+  }
+  &__col {
+    min-width: 28% !important;
+    padding: 7.5px !important;
+  }
+  &__category {
+    margin: 25px 0px;
+    text-align: left;
+    padding-top: 15px;
+    @include FS(FM);
+    @include FM(B);
+    @include themify($themes) {
+      color: themed('string');
+    }
+  }
+  &__head {
+    margin-bottom: 40px;
+  }
+  &__header {
+    height: 140px;
+    width: 100%;
+    &__image {
+      height: 140px;
+      width: 100%;
+    }
+  }
+  &__border {
+    height: 1px !important;
+    width: calc(100% - 20px);
+    margin: 5px 10px;
+    @include themify($themes) {
+      background: themed('border');
+    }
+  }
+  &__item {
+    margin: 10px 0px;
+  }
+  &__detail {
+    height: 35px;
+    width: 100%;
+    margin: 20px 0px;
+  }
+  &__relate {
+    margin: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    @include themify($themes) {
+      box-shadow: 0px 0px 0px 1px themed('shadow');
+    }
+    &__category {
+      margin: 0px 20px;
+      text-align: left;
+      padding-top: 15px;
+      @include FS(FM);
+      @include FM(B);
+      @include themify($themes) {
+        color: themed('string');
+      }
+    }
+  }
+}

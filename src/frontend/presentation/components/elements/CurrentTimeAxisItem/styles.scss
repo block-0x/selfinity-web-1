@@ -1,0 +1,42 @@
+.currenttimeaxis-item {
+    // border-radius: 15px;
+    width: 100%;
+    clear: both;
+    height: 100%;
+    text-align: center;
+    z-index: 100;
+    @include themify($themes) {
+      background: themed('background');
+      box-shadow: 0px 0px 10px 2px themed('shadow');
+    }
+  &__link {
+    @include default-link;
+      &:hover > .currenttimeaxis-item {
+      //   @include themify($themes) {
+      //     transition: all 0.3s ease-in-out;
+      //     box-shadow: 0px 0px 10px 2px themed('complementary');
+      // }
+    }
+  }
+  &__title {
+    @include FS(S);
+    @include FM(M);
+    text-align: center;
+    height: 40px;
+    padding: 8px 0px;
+    float: left;
+    @include themify($themes) {
+      color: themed('string');
+    }
+  }
+
+  &__border {
+    height: 1px !important;
+    width: calc(100% - 20px);
+    margin: 0px 10px;
+    float: right;
+    @include themify($themes) {
+      background: themed('border');
+    }
+  }
+}

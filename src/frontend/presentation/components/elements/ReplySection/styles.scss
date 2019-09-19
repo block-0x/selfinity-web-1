@@ -1,0 +1,45 @@
+.reply-section {
+  position: relative;
+  padding: 12px 5%;
+  height: 100%;
+  clear: both;
+  @include init_wh();
+  @include themify($themes) {
+    transition: all 0.3s ease-in-out;
+    border-top: solid 1px themed('backgroundLight');
+    border-bottom: 1px solid themed('border');
+  }
+  &__link {
+    cursor: pointer;
+    @include default-link;
+    &:hover > .reply-section__image {
+      @include svg-set() {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          stroke: lighten(themed('backgroundThick'), 20%) !important;
+          fill: lighten(themed('backgroundThick'), 20%)!important;
+        }
+      }
+    }
+  }
+  &__image {
+    // margin-left: 20px;
+    float: left;
+    @include svg-set() {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        stroke: themed('backgroundThick') !important;
+        fill: themed('backgroundThick')!important;
+      }
+    }
+  }
+  &__title {
+    @include FM(R);
+    @include FS(FM);
+    @include themify($themes) {
+      color: themed('backgroundThick') !important;
+    }
+    float: left;
+    margin-left: 8px;
+  }
+}

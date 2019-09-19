@@ -1,0 +1,60 @@
+.introduction-new-button {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  text-align: center;
+  @include themify($themes) {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 0px 2px themed('base');
+    background: themed('transparent') !important;
+  }
+  &:hover {
+    @include themify($themes) {
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 0px 0px 2px themed('base');
+      background: themed('base') !important;
+    }
+    & > .introduction-new-button__icon {
+      & > .introduction-new-button__icon-image {
+        @include svg-set() {
+          @include themify($themes) {
+            transition: all 0.3s ease-in-out;
+            stroke: themed('background') !important;
+            fill: themed('background') !important;
+          }
+        }
+      }
+    }
+    & > .introduction-new-button__value {
+      text-decoration: none !important;
+      @include themify($themes) {
+        color: themed('background');
+      }
+    }
+  }
+  &__icon {
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    &-image {
+      @include svg-set() {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          stroke: themed('base') !important;
+          fill: themed('base') !important;
+        }
+      }
+    }
+  }
+  &__value {
+    @include FS(FM);
+    @include FM(B);
+    text-decoration: none !important;
+    @include themify($themes) {
+      color: themed('base');
+    }
+    margin-left: 8px;
+  }
+}

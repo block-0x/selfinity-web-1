@@ -1,0 +1,20 @@
+.tutorial-item {
+  &__link {
+    &:hover {
+      & > .tutorial-item {
+        &__title {
+        }
+        &__text {
+        }
+        &__href {
+        }
+      }
+    }
+  }
+  &__title {
+  }
+  &__text {
+  }
+  &__href {
+  }
+}

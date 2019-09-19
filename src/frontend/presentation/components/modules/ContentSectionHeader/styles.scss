@@ -1,0 +1,113 @@
+.content-section-header {
+  width: 100%;
+  height: 108px;
+  @include mq-down(sm) {
+    height: 86px;
+  };
+  clear: both;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  @include themify($themes) {
+    background: themed('background');
+    border-bottom: solid 1px themed('border');
+  }
+  &__link {
+    @include default-link;
+    &:hover > .content-section-header {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        background: darken(themed('background'), 5%) !important;
+      }
+    }
+  }
+  &__body {
+    width: 1044px;
+    @include mq-down(xxl) {
+      width: 736px;
+    };
+    @include mq-down(lg) {
+      width: 696px;
+    };
+    @include mq-down(md) {
+      max-width: 420px;
+      width: 90%;
+    };
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    padding-top: 11px;
+    padding-bottom: 8px;
+  }
+  &__left {
+    float: left;
+    width: 70%;
+    @include mq-down(sm) {
+      width: 100%;
+    };
+    &-title {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+      margin-bottom: 8px;
+      @include FS(M);
+      @include FM(B);
+      text-align: left;
+      @include themify($themes) {
+        color: themed('backgroundContrastLight');
+      }
+    }
+    &-body {
+      height: 40px;
+      @include mq-down(sm) {
+        height: 22px;
+      };
+      overflow: hidden;
+      white-space: normal;
+      text-overflow: ellipsis;
+      @include FS(FS);
+      @include FM(M);
+      // @include LH(FS);
+      @include themify($themes) {
+        color: themed('backgroundContrastLight');
+      }
+    }
+  }
+  &__right {
+    float: left;
+    width: 30%;
+    padding: 0 8px;
+    @include mq-down(sm) {
+      display: none;
+    };
+    &-top {
+      margin: 4px;
+      height: 30px;
+      clear: both;
+    }
+    &-point {
+      margin: 0 8px;
+      height: 30px;
+      float: left;
+    }
+    &-button {
+      margin: 0 8px;
+      margin-top: -4px;
+      height: 38px;
+      width: 180px;
+      float: left;
+      @include mq-down(xxl) {
+        height: 44px;
+        width: 44px;
+      };
+      @include mq-down(md) {
+        display: none;
+      };
+    }
+    &-labels {
+      width: 100%;
+      // padding: 8px 0;
+      // padding-right: 8px;
+    }
+  }
+}

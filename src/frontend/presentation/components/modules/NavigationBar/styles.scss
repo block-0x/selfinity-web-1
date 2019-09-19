@@ -1,0 +1,15 @@
+.navigation-bar {
+  background-color: transparent;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  height: 68px;
+  // margin: 0 auto;
+  // max-width: 100vw;
+  &__item {
+    background-color: transparent;
+    // max-width: 120px;
+    margin: 15px 20px;
+    display: inline-block;
+  }
+}

@@ -1,0 +1,78 @@
+.popover-menu-item {
+  height: 34px !important;
+  width: 100%;
+  min-width: 180px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &__full-screen-hidden {
+    display: list-item;
+
+    // @media @small {
+    //   display: none;
+    // }
+  }
+  &__body {
+    padding: 8px 10px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    clear: both;
+    transition: all 0.3s ease-in-out;
+    @include themify($themes) {
+      background: themed('background');
+    }
+    &-image {
+      float: left;
+      margin-right: 8px;
+      transition: all 0.3s ease-in-out;
+      @include svg-set() {
+        transition: all 0.3s ease-in-out;
+        @include themify($themes) {
+          stroke: themed('backgroundThick') ;
+          fill: themed('backgroundThick');
+        }
+      };
+    }
+    &-value {
+      float: left;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      @include FS(S);
+      @include FM(M);
+      text-decoration: none !important;
+      @include themify($themes) {
+          color: themed('backgroundThick');
+      }
+      margin-top: -4px;
+    }
+  }
+  &__link {
+    cursor: pointer;
+    @include default-link;
+    &:hover > .popover-menu-item__body {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background: themed('background');
+      }
+      & > .popover-menu-item__body-image {
+        @include svg-set() {
+          transition: all 0.3s ease-in-out;
+          @include themify($themes) {
+            stroke: lighten(themed('base'), 5%) !important;
+            fill: lighten(themed('base'), 5%)!important;
+          }
+        };
+      }
+      & > .popover-menu-item__body-value {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          color: lighten(themed('base'), 5%);
+        };
+      }
+    }
+    &[disabled] {
+    }
+  }
+}

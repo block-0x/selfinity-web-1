@@ -1,0 +1,600 @@
+.wallet-list {
+  width: 60%;
+  min-width: 400px;
+  max-width: 720px;
+  margin: 0 auto;
+  @include mq-down(md) {
+    width: calc(100% - 40px);
+    margin: 20px;
+    min-width: 280px;
+  };
+  @include mq-down(sm) {
+    width: calc(100% - 20px);
+    margin: 10px;
+    min-width: 280px;
+  };
+  &__section {
+    height: 54px;
+    clear: both;
+    padding: 10px 15px;
+    @include themify($themes) {
+      background: themed('background');
+      border-bottom: solid 1px themed('border');
+    }
+    &-left {
+      float: left;
+    }
+    &-right {
+      float: right;
+    }
+  }
+  &__claim {
+    padding: 20px;
+    @include mq-down(fm) {
+      padding: 20px 8px;
+    }
+    &-title {
+      @include FS(FM);
+      @include FM(B);
+      text-decoration: none !important;
+      @include themify($themes) {
+        color: themed('backgroundContrastLight');
+      }
+      text-align: center;
+      margin: 10px 0;
+    }
+    &-button {
+      width: 80%;
+      height: 44px;
+      margin: 0 auto;
+      @include mq-down(fm) {
+        width: calc(100% - 10px);
+        margin: 0 5px;
+      };
+    }
+  }
+  &__credit {
+    border-radius: 15px;
+    margin: 12px 0;
+    padding: 4px;
+    @include themify($themes) {
+      box-shadow: 0 0 4px 2px themed('shadow');
+    };
+    &-image {
+      float: left;
+      margin-right: 12px;
+      width: 24px;
+      height: 24px;
+      @include svg-set() {
+        @include themify($themes) {
+          fill: themed('sub');
+          stroke: themed('sub');
+        };
+      };
+      @include mq-down(fm) {
+        margin-right: 4px;
+      };
+    }
+    &-title {
+      float: left;
+      @include FS(M);
+      @include FM(B);
+      text-decoration: none !important;
+      @include themify($themes) {
+        color: themed('sub');
+      }
+      @include mq-down(fm) {
+        @include FS(FM);
+        @include FM(B);
+      };
+    }
+    &-value {
+      @include FS(M);
+      @include FM(B);
+      text-decoration: none !important;
+      @include themify($themes) {
+        color: themed('backgroundContrastLight');
+      }
+      @include mq-down(fm) {
+        @include FS(FM);
+        @include FM(B);
+        max-width: 180px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      };
+      @include mq-down(sm) {
+        max-width: 122px;
+      };
+    }
+    &-items {
+      padding: 20px;
+      @include init_wh;
+    }
+  }
+  &__token {
+    border-radius: 15px;
+    margin: 12px 0;
+    padding: 4px;
+    @include themify($themes) {
+      box-shadow: 0 0 4px 2px themed('shadow');
+    };
+    &-image {
+      float: left;
+      margin-right: 12px;
+      width: 24px;
+      height: 24px;
+      @include mq-down(fm) {
+        margin-right: 4px;
+      };
+      // @include svg-set() {
+      //   @include themify($themes) {
+      //     fill: themed('base');
+      //     stroke: themed('base');
+      //   };
+      // };
+    }
+    &-title {
+      float: left;
+      @include FS(M);
+      @include FM(B);
+      text-decoration: none !important;
+      @include themify($themes) {
+        color: themed('complementary');
+      }
+      @include mq-down(fm) {
+        @include FS(FM);
+        @include FM(B);
+      };
+    }
+    &-value {
+      @include FS(M);
+      @include FM(B);
+      text-decoration: none !important;
+      @include themify($themes) {
+        color: themed('backgroundContrastLight');
+      }
+      @include mq-down(fm) {
+        @include FS(FM);
+        @include FM(B);
+      };
+    }
+    &-items {
+      padding: 20px;
+      @include init_wh;
+    }
+  }
+  &__eth-wallet {
+    border-radius: 15px;
+    margin: 12px 0;
+    padding: 4px;
+    @include themify($themes) {
+      box-shadow: 0 0 4px 4px themed('shadow');
+    };
+    &-image {
+      float: left;
+      margin-right: 12px;
+      width: 24px;
+      height: 24px;
+      @include mq-down(fm) {
+        margin-right: 4px;
+      };
+      @include svg-set() {
+        @include themify($themes) {
+          fill: themed('backgroundContrastLight');
+          stroke: themed('backgroundContrastLight');
+        };
+      };
+    }
+    &-title {
+      float: left;
+      @include FS(M);
+      @include FM(B);
+      text-decoration: none !important;
+      @include themify($themes) {
+        color: themed('backgroundContrastLight');
+      }
+      @include mq-down(fm) {
+        @include FS(FM);
+        @include FM(B);
+      };
+    }
+    &-value {
+      @include FS(M);
+      @include FM(B);
+      text-decoration: none !important;
+      @include themify($themes) {
+        color: themed('backgroundContrastLight');
+      }
+      @include mq-down(fm) {
+        @include FS(FM);
+        @include FM(B);
+      };
+    }
+    &-items {
+      padding: 20px;
+      @include init_wh;
+    }
+  }
+  &__about {
+    margin-bottom: 20px;
+    @include FS(S);
+    @include FM(L);
+    @include LH(S);
+    @include themify($themes) {
+      color: themed('backgroundContrastLight');
+    }
+    @include mq-down(fm) {
+      @include FS(FS);
+      @include LH(FS);
+    };
+  }
+  &__address {
+    padding: 10px 0;
+    margin-bottom: 44px;
+    height: 44px;
+    &-title {
+      float: left;
+      @include FS(S);
+      @include FM(R);
+      @include themify($themes) {
+        color: themed('backgroundContrastLight');
+      }
+      @include mq-down(fm) {
+        @include FS(FS);
+        @include FM(R);
+      };
+      margin-bottom: 4px;
+    }
+    &-value {
+      float: right;
+      @include FS(S);
+      @include FM(R);
+      @include themify($themes) {
+        color: themed('backgroundContrastLight');
+      }
+      @include mq-down(fm) {
+        @include FS(FS);
+        @include FM(R);
+        width: 100%;
+      };
+      word-wrap: break-word;
+    }
+  }
+  &__ways {
+    &-title {
+      text-align: center;
+      @include FS(FM);
+      @include FM(B);
+      @include themify($themes) {
+        color: themed('sub');
+      }
+      margin: 8px 4px;
+      @include mq-down(md) {
+        @include FS(FM);
+      };
+      @include mq-down(sm) {
+        @include FS(S);
+      };
+    }
+    &-lists {
+      margin: 0px 24px;
+      @include themify($themes) {
+        color: themed('complementary');
+      }
+      @include mq-down(fm) {
+        margin: 0px 0px;
+      };
+    }
+    &-border {
+      height: 2px !important;
+      width: 300px;
+      margin: 8px auto;
+      border-radius: 2px;
+      @include themify($themes) {
+        background: themed('sub');
+      }
+      @include mq-down(sm) {
+        width: 250px;
+      };
+    }
+    &-list {
+      width: 300px;
+      margin: 12px auto;
+      @include mq-down(md) {
+        margin: 4px auto;
+      };
+      @include mq-down(sm) {
+        width: 100%;
+      };
+      &-title {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        @include FS(FM);
+        @include FM(B);
+        text-align: center;
+        @include themify($themes) {
+          color: themed('backgroundContrastLight');
+        }
+        @include mq-down(md) {
+          @include FS(S);
+        };
+      }
+      &-icon {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 40px;
+        margin-right: 24px;
+        @include mq-down(md) {
+          margin-right: 6px;
+        };
+      }
+    }
+  }
+  &__merits {
+    margin-top: 24px;
+    &-title {
+      text-align: center;
+      @include FS(FM);
+      @include FM(B);
+      @include themify($themes) {
+        color: themed('base');
+      }
+      margin: 8px 4px;
+      @include mq-down(md) {
+        @include FS(FM);
+      };
+      @include mq-down(sm) {
+        @include FS(S);
+      };
+    }
+    &-border {
+      height: 2px !important;
+      width: 300px;
+      margin: 8px auto;
+      border-radius: 2px;
+      @include themify($themes) {
+        background: themed('base');
+      }
+      @include mq-down(sm) {
+        width: 250px;
+      };
+    }
+    &-lists {
+      margin: 0px 24px;
+      @include themify($themes) {
+        color: themed('complementary');
+      }
+      @include mq-down(fm) {
+        margin: 0px 0px;
+      };
+    }
+    &-list {
+      width: 310px;
+      margin: 16px auto;
+      // @include mq-down(md) {
+      //   margin: 4px auto;
+      // };
+      @include mq-down(sm) {
+        width: 100%;
+      };
+      @include mq-up(md) {
+        width: 400px;
+      };
+      &-title {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        @include FS(FM);
+        @include FM(B);
+        text-align: left;
+        @include themify($themes) {
+          color: themed('backgroundContrastLight');
+        }
+        @include mq-down(md) {
+          @include FS(S);
+        };
+      }
+    }
+  }
+  &__token-merits {
+    margin-top: 24px;
+    &-title {
+      text-align: center;
+      @include FS(FM);
+      @include FM(B);
+      @include themify($themes) {
+        color: themed('complementary');
+      }
+      margin: 8px 4px;
+      @include mq-down(md) {
+        @include FS(FM);
+      };
+      @include mq-down(sm) {
+        @include FS(S);
+      };
+    }
+    &-border {
+      height: 2px !important;
+      width: 300px;
+      margin: 8px auto;
+      border-radius: 2px;
+      @include themify($themes) {
+        background: themed('complementary');
+      }
+      @include mq-down(sm) {
+        width: 250px;
+      };
+    }
+    &-lists {
+      margin: 0px 24px;
+      @include themify($themes) {
+        color: themed('complementary');
+      }
+      @include mq-down(fm) {
+        margin: 0px 0px;
+      };
+    }
+    &-list {
+      width: 310px;
+      margin: 16px auto;
+      // @include mq-down(md) {
+      //   margin: 4px auto;
+      // };
+      @include mq-down(sm) {
+        width: 100%;
+      };
+      @include mq-up(md) {
+        width: 400px;
+      };
+      &-title {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        @include FS(FM);
+        @include FM(B);
+        text-align: left;
+        @include themify($themes) {
+          color: themed('backgroundContrastLight');
+        }
+        @include mq-down(md) {
+          @include FS(S);
+        };
+      }
+    }
+  }
+  &__private-key {
+    width: calc(80% - 20px);
+    height: 44px;
+    margin: 0 auto;
+    @include mq-down(fm) {
+      width: calc(100% - 10px);
+      margin: 20px 5px;
+    };
+  }
+  &__token-about {
+    margin: 8px 0;
+    &-title {
+      text-align: center;
+      margin: 8px auto;
+      width: 100%;
+      @include FS(FM);
+      @include FM(B);
+      @include themify($themes) {
+        color: themed('complementary');
+      };
+    }
+    &-border {
+      height: 2px !important;
+      width: calc(100% - 4px);
+      margin: 8px auto;
+      border-radius: 2px;
+      @include themify($themes) {
+        background: themed('complementary');
+      }
+    }
+    &-body {
+      clear: both;
+      padding: 22px 0;
+      &__image {
+        display: block;
+        margin: 0px auto;
+        height: 80px;
+        width: 80px;
+      }
+      &__text {
+        width: calc(100% - 14px);
+        display: block;
+        margin: 0px auto;
+        &-title {
+          margin: 12px 0px;
+          text-align: center;
+          @include FM(B);
+          @include FS(FM);
+          @include themify($themes) {
+            color: themed('base');
+          }
+        }
+        &-body {
+          @include FM(R);
+          @include LH(S);
+          @include themify($themes) {
+            color: themed('backgroundContrastLight');
+          }
+          text-align: center;
+          white-space: pre-wrap;
+          @include FS(S);
+          & strong {
+            @include FM(B);
+            @include themify($themes) {
+              color: themed('complementary');
+            }
+          }
+        }
+      }
+    }
+  }
+  &__credit-about {
+    margin: 8px 0;
+    &-title {
+      text-align: center;
+      margin: 8px auto;
+      width: 100%;
+      @include FS(FM);
+      @include FM(B);
+      @include themify($themes) {
+        color: themed('sub');
+      };
+    }
+    &-border {
+      height: 2px !important;
+      width: calc(100% - 4px);
+      margin: 8px auto;
+      border-radius: 2px;
+      @include themify($themes) {
+        background: themed('sub');
+      }
+    }
+    &-body {
+      clear: both;
+      padding: 22px 0;
+      &__image {
+        display: block;
+        margin: 0px auto;
+        height: 80px;
+        width: 80px;
+      }
+      &__text {
+        width: calc(100% - 14px);
+        display: block;
+        margin: 0px auto;
+        &-title {
+          margin: 12px 0px;
+          text-align: center;
+          @include FM(B);
+          @include FS(FM);
+          @include themify($themes) {
+            color: themed('sub');
+          }
+        }
+        &-body {
+          @include FM(R);
+          @include themify($themes) {
+            color: themed('backgroundContrastLight');
+          }
+          text-align: left;
+          word-wrap: break-word;
+          @include FS(S);
+          & strong {
+            @include FM(B);
+            @include themify($themes) {
+              color: themed('complementary');
+            }
+          }
+        }
+      }
+    }
+  }
+}

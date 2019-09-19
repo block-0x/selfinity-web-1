@@ -1,0 +1,126 @@
+@mixin simpleIconButtonActive {
+  .active & {
+    @include themify($themes) {
+      transition: all 0.3s ease-in-out;
+      background: themed('base') !important;
+      box-shadow: 0px 0px 0px 2px themed('base');
+    }
+    & > .simple-icon-button__items {
+      & > .simple-icon-button__items-text {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          color: themed('background');
+        }
+      }
+      & > .simple-icon-button__items-image {
+        @include svg-set() {
+          @include themify($themes) {
+            transition: all 0.3s ease-in-out;
+            stroke: themed('background') !important;
+            fill: themed('background') !important;
+          }
+        }
+      }
+    }
+    &:hover {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        background: themed('background')  !important;
+      }
+      & > .simple-icon-button__items {
+        & > .simple-icon-button__items-text {
+          @include themify($themes) {
+            transition: all 0.3s ease-in-out;
+            color: themed('base');
+          }
+        }
+        & > .simple-icon-button__items-image {
+          @include svg-set() {
+            @include themify($themes) {
+              transition: all 0.3s ease-in-out;
+              stroke: themed('base') !important;
+              fill: themed('base') !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.simple-icon-button {
+  height: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  text-align: center;
+  @include themify($themes) {
+    background: themed('transparent');
+    box-shadow: 0px 0px 0px 2px themed('base');
+    // border-color: themed('backgroundThick');
+  }
+  &__link {
+    cursor: pointer;
+    background: transparent;
+    @include default-link;
+    padding: 0px;
+    &:hover > .simple-icon-button {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        background: themed('base');
+      }
+      & > .simple-icon-button__items {
+        & > .simple-icon-button__items-text {
+          @include themify($themes) {
+            transition: all 0.3s ease-in-out;
+            color: themed('background');
+          }
+        }
+        & > .simple-icon-button__items-image {
+          @include svg-set() {
+            @include themify($themes) {
+              transition: all 0.3s ease-in-out;
+              stroke: themed('background') !important;
+              fill: themed('background') !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__items {
+    transition: all 0.3s ease-in-out;
+    text-decoration: none !important;
+    clear: both;
+    &-text {
+      @include FS(FM);
+      @include FM(B);
+      text-decoration: none !important;
+      @include themify($themes) {
+        color: themed('base');
+      }
+      float: left;
+      margin-left: 8px;
+    }
+    &-image {
+      float: left;
+      text-decoration: none !important;
+      @include svg-set() {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          stroke: themed('base') !important;
+          fill: themed('base')!important;
+        }
+      }
+    }
+  }
+  @include simpleIconButtonActive;
+}
+
+#simple_icon_button_submit {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

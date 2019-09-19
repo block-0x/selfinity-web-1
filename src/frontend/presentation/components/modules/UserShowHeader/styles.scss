@@ -1,0 +1,230 @@
+.user-show-header {
+  @include init_wh();
+  @include themify($themes) {
+    background: themed('background');
+  }
+  &__detail {
+    display: block;
+    line-height: 1;
+    margin: 0;
+    width: 100%;
+    max-width: 500px;
+    min-height: 44px;
+    margin: 10px auto;
+    @include FM(R);
+    @include FS(S);
+    text-align: center;
+    @include themify($themes) {
+      color: themed('backgroundContrastLight');
+    }
+     @include mq-down(md) {
+      padding: 5px 18px;
+      @include FS(FS);
+      margin: 0px auto;
+    };
+  }
+  &__items {
+    width: 100%;
+    min-height: 140px;
+    clear: both;
+    padding: 24px 60px;
+    padding-bottom: 0 !important;
+    @include mq-down(fm) {
+      padding: 24px 20px;
+    }
+    &-left {
+      float: left;
+      @include mq-down(md) {
+        float: initial;
+        display: block;
+        clear: both;
+      };
+    }
+    &-image {
+      float: left;
+      margin-right: 12px;
+    }
+    &-namegroup {
+      float: left;
+      @include mq-up(lg) {
+        max-width: 410px;
+      };
+      @include mq-down(lg) {
+        max-width: 200px;
+      };
+      @include mq-down(md) {
+        max-width: initial;
+        float: initial;
+        min-height: 80px;
+        margin-bottom: 14px;
+      };
+    }
+    &-name {
+      display: block;
+      @include FM(B);
+      @include FS(M);
+      line-height: 1.4;
+      @include mq-down(md) {
+        @include FS(S);
+        line-height: 1.4;
+      };
+      @include themify($themes) {
+        color: themed('backgroundContrastLight');
+      }
+      margin-top: 8px;
+      margin-bottom: 4px;
+      word-wrap: break-word;
+    }
+    &-uid {
+      display: block;
+      @include FM(R);
+      @include FS(S);
+      line-height: 1.4;
+      @include mq-down(lg) {
+        font-size: 12px !important;
+      };
+      @include mq-down(md) {
+        @include FM(R);
+        @include FS(S);
+        line-height: 1.4;
+      };
+      @include themify($themes) {
+        color: themed('backgroundThick');
+      }
+      margin-bottom: 8px;
+      word-wrap: break-word;
+    }
+    &-right {
+      float: right;
+      @include mq-down(md) {
+        float: initial;
+        display: block;
+        clear: both;
+      };
+    }
+    &-credit {
+      height: 44px;
+      margin: 0px;
+      margin-bottom: 12px;
+      width: 300px;
+      @include mq-down(md) {
+        width: 148px;
+        height: 64px;
+        margin: 0 auto;
+        padding: 10px 0;
+      };
+      &__help {
+        float: left;
+        height: 20px;
+        width: 18px;
+        margin: 7px 8px;
+        margin-left: 0;
+      }
+      &__point {
+        float: left;
+      }
+    }
+    &-buttons {
+      height: 54px;
+      width: 305px;
+      margin: 0 auto;
+      display: inline;
+      @include mq-down(md) {
+        display: block;
+        margin: 10px auto;
+        margin-bottom: 20px;
+      };
+    }
+    &-request {
+      float: left;
+      height: 44px;
+      width: calc(100% - 36px);
+      @include mq-down(fm) {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+      };
+      &__help1 {
+        float: left;
+        height: 20px;
+        width: 18px;
+        margin: 8px 8px;
+        margin-left: 0;
+        @include mq-down(fm) {
+          display: none;
+        };
+      }
+      &__help2 {
+        float: none;
+        height: 20px;
+        width: 18px;
+        margin: 8px auto;
+      }
+    }
+    &-edit {
+      height: 44px;
+      width: 305px;
+      margin: 0 auto;
+      // display: inline;
+      @include mq-down(md) {
+        display: block;
+        margin: 10px auto;
+        margin-bottom: 20px;
+      };
+      @include mq-down(sm) {
+        width: 100%;
+      };
+    }
+    &-requests {
+      height: 44px;
+      width: 305px;
+      margin: 0 auto;
+      // display: inline;
+      @include mq-down(md) {
+        display: block;
+        margin: 10px auto;
+        margin-bottom: 20px;
+      };
+      @include mq-down(fm) {
+        height: 64px;
+      };
+      @include mq-down(sm) {
+        width: 100%;
+      };
+    }
+    &-follow {
+      height: 44px;
+      margin: 0px;
+      margin-bottom: 12px;
+      width: 300px;
+      padding-left: 26px;
+      padding-right: 6px;
+      @include mq-down(md) {
+        display: block;
+        margin: 10px auto;
+        margin-bottom: 20px;
+      };
+      @include mq-down(fm) {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0px auto;
+        margin-bottom: 12px;
+      };
+      @include mq-down(sm) {
+        width: 100%;
+      };
+    }
+    &-button {
+      float: right;
+      height: 44px;
+      width: 240px;
+      margin: 5px;
+    }
+    &-icon {
+      float: right;
+      height: 44px;
+      width: 44px;
+      margin: 5px;
+    }
+  }
+}

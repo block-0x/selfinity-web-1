@@ -1,0 +1,37 @@
+.navigation-item {
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  height: 100%;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  text-decoration-line: none;
+  text-decoration: none;
+  @include FS(FM);
+  @include FM(B);
+  @include themify($themes) {
+    color: themed('string');
+  }
+  &__link {
+    text-decoration-line: none;
+    text-decoration: none;
+    transition: all 200ms ease-in;
+    &:hover, &:focus, &.active {
+      text-decoration-line: none;
+      text-decoration: none;
+      transition: all 200ms ease-in;
+      z-index: 2;
+      @include themify($themes) {
+      }
+      & > .navigation-item {
+        text-decoration-line: none;
+        text-decoration: none;
+        @include themify($themes) {
+          transition: all 200ms ease-in;
+          border-bottom: medium solid themed('base');
+          padding-bottom: 8px;
+          color: themed('base');
+        }
+      }
+    }
+  }
+}

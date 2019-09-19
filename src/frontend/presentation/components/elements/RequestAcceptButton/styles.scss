@@ -1,0 +1,14 @@
+.request-accept-button {
+  display: block;
+  // clear: both;
+  &__item {
+    margin: 0 5px;
+    // float: left;
+    height: 100%;
+    height: 34px;
+    width: calc(50% - 10px);
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+  }
+}

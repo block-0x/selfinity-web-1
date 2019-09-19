@@ -1,0 +1,20 @@
+.home-label-item {
+  @include init_wh();
+  clear: both;
+  @include themify($themes) {
+    border-top: 1px solid themed('border');
+    border-bottom: 1px solid themed('border');
+  }
+  &__text {
+    @include FS(M);
+    @include FM(B);
+    padding: 12px;
+    width: 30%;
+    float: left;
+  }
+  &__stats {
+    height: 100%;
+    width: 30%;
+    float: left;
+  }
+}

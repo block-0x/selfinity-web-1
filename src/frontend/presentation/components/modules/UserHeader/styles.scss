@@ -1,0 +1,90 @@
+$userHeaderHeight: 6rem;
+
+.user-header {
+  width: 100%;
+  height: $taskHeaderHeight;
+  clear: both;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  @include themify($themes) {
+    background: themed('background');
+    border-bottom: solid 1px themed('border');
+  }
+  &__body {
+    width: 1044px;
+    @include mq-down(xxl) {
+      width: 736px;
+    };
+    @include mq-down(lg) {
+      width: 696px;
+    };
+    @include mq-down(md) {
+      max-width: 420px;
+      width: 90%;
+    };
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__link {
+    @include default-link;
+    &:hover > .user-header {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        background: darken(themed('background'), 5%) !important;
+      }
+    }
+  }
+  &__image {
+    float: left;
+    margin: calc( ( #{$userHeaderHeight} / 2 ) - 18px) 0px;
+  }
+  &__nickname {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    float: left;
+    max-width: 50%;
+    margin: calc( ( #{$userHeaderHeight} / 2 ) - 20px) 8px;
+    @include FS(M);
+    @include FM(B);
+    @include mq-down(md) {
+      @include FS(S);
+      margin: calc( ( #{$userHeaderHeight} / 2 ) - 10px) 8px;
+    };
+    @include mq-down(sm) {
+      max-width: 80%;
+    };
+    text-align: left;
+    @include themify($themes) {
+      color: themed('backgroundContrastLight');
+    }
+    margin-top: 12px;
+  }
+  &__point {
+    float: left;
+    margin: calc( ( #{$userHeaderHeight} / 2 ) - 15px) 120px;
+    @include mq-down(md) {
+      margin-left: 8px;
+    };
+    @include mq-down(sm) {
+      display: none;
+    };
+    margin-right: 0px;
+  }
+  &__request {
+    float: left;
+    width: 44px;
+    height: 44px;
+    margin: calc( ( #{$userHeaderHeight} / 2 ) - 22px) 16px;
+    @include mq-up(fm) {
+      width: 160px;
+    }
+    @include mq-down(md) {
+      margin-left: 8px;
+    };
+    @include mq-down(sm) {
+      display: none;
+    };
+    margin-right: 0px;
+  }
+}

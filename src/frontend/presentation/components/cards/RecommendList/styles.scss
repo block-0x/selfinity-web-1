@@ -1,0 +1,39 @@
+
+.recommend-list {
+  width: 100% !important;
+  &__grid {
+    width: 100% !important;
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+  &__row {
+    padding: 0px !important;
+    width: 100% !important;
+    margin: 0px !important;
+  }
+  &__col {
+    min-width: 28% !important;
+    padding: 7.5px !important;
+  }
+  &__category {
+    padding-top: 15px;
+    @include FS(FM);
+    @include FM(B);
+    @include themify($themes) {
+      color: themed('string');
+    }
+  }
+  &__header {
+    height: 140px;
+    width: 100%;
+    &__image {
+      height: 140px;
+      width: 100%;
+    }
+  }
+  &__detail {
+    height: 45px;
+    width: 100%;
+    margin: 20px 0px 60px 0px;
+  }
+}

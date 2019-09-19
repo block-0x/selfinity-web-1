@@ -1,0 +1,63 @@
+.navigator-menu-item {
+  // height: 34px !important;
+  width: 100%;
+  min-width: 280px;
+  @include mq-down(sm) {
+    min-width: 200px;
+  };
+  transition: all 0.3s ease-in-out;
+  &__header {
+    padding: 8px 10px;
+    padding-bottom: 0px;
+    width: 100%;
+    height: 34px;
+    clear: both;
+    transition: all 0.3s ease-in-out;
+    @include themify($themes) {
+      background: themed('background')!important;
+    }
+    &-image {
+      float: left;
+      margin-right: 8px;
+      transition: all 0.3s ease-in-out;
+      @include svg-set() {
+        transition: all 0.3s ease-in-out;
+        @include themify($themes) {
+          stroke: themed('backgroundThick');
+          fill: themed('backgroundThick');
+        }
+      };
+    }
+    &-title {
+      float: left;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      @include FS(S);
+      @include FM(B);
+      text-decoration: none !important;
+      @include themify($themes) {
+        color: themed('backgroundThick')!important;
+      }
+    }
+  }
+  &__body {
+    padding: 8px 10px;
+    padding-top: 4px;
+    width: 100%;
+    text-align: left;
+    clear: both;
+    transition: all 0.3s ease-in-out;
+    white-space: pre-wrap;
+    @include FS(FS);
+    @include LH(FS);
+    @include FM(M);
+    @include mq-down(sm) {
+      font-size: 12px;
+    };
+    @include themify($themes) {
+      color: themed('backgroundThick')!important;
+      background: themed('background')!important;
+    }
+  }
+}

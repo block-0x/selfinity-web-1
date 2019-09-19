@@ -1,0 +1,22 @@
+.label-tag-with-close {
+  @include init_wh();
+  clear: both;
+  &__edit {
+  }
+  &__item {
+    margin-right: 5px;
+    float: left;
+  }
+  &__icon {
+    padding: 2px;
+    float: left;
+    cursor: pointer;
+    @include svg-set() {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        stroke: themed('backgroundThick') !important;
+        fill: themed('backgroundThick')!important;
+      }
+    }
+  }
+}

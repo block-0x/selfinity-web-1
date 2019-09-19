@@ -1,0 +1,64 @@
+.opinion-new-viewer {
+  position: relative;
+  width: 100%;
+  height: 375px;
+  overflow-y: visible;
+  padding: 15px;
+  @include mq-down(sm) {
+    padding: 15px 4px;
+    height: 346px;
+  };
+  &__container {
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    top: 0px;
+    white-space: normal;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  &__items {
+    width: 100%;
+    height: 339px;
+    position: absolute;
+    top: 15px;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  &__item {
+    margin: 0 12px;
+    display: inline-block;
+    @include mq-down(fm) {
+      width: 332px;
+      margin: 0 6px;
+    };
+    width: 480px;
+    &-top {
+      width: 100%;
+      display: inline-block;
+      height: 100%;
+    }
+    &-border {
+      height: 22px;
+    }
+    &-input {
+      height: 64px;
+    }
+  }
+  &__button {
+    // padding: 70px 0;
+    // margin: 4px;a
+    margin-right: 8px;
+    margin-left: 8px;
+    display: inline-block;
+    width: 214px;
+    height: 68px;
+    @include mq-down(fm) {
+      width: 170px;
+    };
+  }
+  &__inline {
+    display: inline-block;
+    margin-left: 8%;
+  }
+}

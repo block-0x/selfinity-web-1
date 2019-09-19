@@ -1,0 +1,37 @@
+.good-answer-background {
+  position: relative;
+  z-index: 10;
+  &__back {
+    transform: rotate(15deg) !important;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 150px !important;
+    height: 150px !important;
+    z-index: 20;
+    display: block;
+    @include mq-down(sm) {
+      width: 120px !important;
+      height: 120px !important;
+    };
+    &-icon {
+      width: 150px !important;
+      height: 150px !important;
+      @include svg-set() {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          // stroke: themed('complementary') !important;
+          // fill: themed('complementary') !important;
+        }
+      }
+      @include mq-down(sm) {
+        width: 120px !important;
+        height: 120px !important;
+      };
+    }
+  }
+  &__children {
+    position: relative;
+    z-index: 30;
+  }
+}

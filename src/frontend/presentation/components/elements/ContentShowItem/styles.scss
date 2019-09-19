@@ -1,0 +1,133 @@
+.content-show-item {
+  @include init_wh();
+  position: relative;
+  &__background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  &__foreground {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 17vh;
+    top: 10vh;
+    left: 0%;
+    @include mq-down(md) {
+      left: 0;
+    };
+  }
+  &__request-bar {
+    height: 75px;
+    // margin: 0 10% 10px 10%;
+    margin: 10px 0;
+    width: 100%;
+  }
+  &__button {
+    margin: 16px auto;
+    width: 100%;
+    height: 44px;
+    margin-bottom: 0;
+  }
+  &__parent {
+    // margin-bottom: 14px;
+    &-axis {
+      height: 0px;
+    }
+    &-axis-1 {
+      height: 44px;
+      @include mq-down(lg) {
+        height: 72px;
+      };
+    }
+  }
+  &__item {
+    // border-radius: 15px;
+    padding: 50px 10%;
+    width: 90%;
+    max-width: 740px;
+    margin: 0 auto;
+    height: 100%;
+    @include themify($themes) {
+      background: themed('background');
+      box-shadow: 0px 0px 0px 1px themed('itemBorder');
+    }
+    @include mq-down(md) {
+      width: 100%;
+    };
+    @include mq-down(fm) {
+      padding: 50px 30px;
+    };
+    @include mq-down(sm) {
+      padding: 25px 25px;
+    };
+    &-title {
+      display: block;
+      line-height: 1;
+      margin: 0;
+      @include FS(M);
+      @include FM(B);
+      text-align: center;
+      min-height: 80px;
+      padding: 20px 0px;
+      @include themify($themes) {
+        color: themed('string');
+      }
+      @include mq-down(fm) {
+        @include FS(M);
+        min-height: 40px;
+        padding: 8px 0px;
+      };
+    }
+    &-border {
+      height: 1px !important;
+      width: 100%;
+      @include themify($themes) {
+        background: themed('border');
+      }
+    }
+    &-body {
+      margin: 20px 0px;
+      @include FS(FM);
+      @include LH(FM);
+      @include FM(M);
+      @include init_wh();
+      @include themify($themes) {
+        color: themed('backgroundContrastLight');
+      }
+      @include mq-down(fm) {
+        @include FS(S);
+        @include LH(FM);
+      };
+    }
+    &-labels {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 0 10px;
+      height: 100%;
+      // height: 44px !important;
+    }
+    &-label {
+      margin: 2px;
+    }
+    &-user {
+      height: 32px;
+      width: 100%;
+    }
+    &-point {
+      height: 44px;
+      width: 100%;
+    }
+    &-foot {
+      min-height: 65px;
+      // margin: 0 10% 10px 10%;
+      margin: 10px 0;
+      width: 100%;
+    }
+  }
+}
+
+#content_show_item {
+  // margin-bottom: 28vh;
+}

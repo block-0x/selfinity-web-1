@@ -1,0 +1,16 @@
+.section-button-header {
+  clear: both;
+  @include init_wh();
+  &__title {
+    margin: 20px 0;
+    float: left;
+    @include FS(M);
+    @include FM(B);
+  }
+  &__button {
+    margin: 20px 0;
+    height: 100%;
+    width: 20%;
+    float: right;
+  }
+}

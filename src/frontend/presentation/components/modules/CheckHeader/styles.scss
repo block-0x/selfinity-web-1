@@ -1,0 +1,86 @@
+.check-header {
+  &__head {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    margin-bottom: 18px;
+    &-title {
+      margin: 0 20px;
+      text-align: center;
+      @include FM(B);
+      @include FS(FM);
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        color: themed('base') !important;
+      }
+      @include mq-down(fm) {
+        @include FS(S);
+      };
+      display: block;
+      line-height: 1;
+    }
+    &-left {
+      &__icon {
+        @include svg-set() {
+          @include themify($themes) {
+            transition: all 0.3s ease-in-out;
+            stroke: themed('base') !important;
+            fill: themed('base') !important;
+          }
+        }
+      }
+    }
+    &-right {
+      transform: scale(-1, 1);
+      &__icon {
+        @include svg-set() {
+          @include themify($themes) {
+            transition: all 0.3s ease-in-out;
+            stroke: themed('base') !important;
+            fill: themed('base') !important;
+          }
+        }
+      }
+    }
+  }
+  &__text {
+    text-align: center;
+    @include FM(B);
+    @include FS(M);
+    margin-bottom: 18px;
+    @include themify($themes) {
+      transition: all 0.3s ease-in-out;
+      color: themed('backgroundContrastLight') !important;
+    }
+    @include mq-down(fm) {
+      @include FS(FM);
+    };
+    display: block;
+    line-height: 1;
+  }
+  &__border {
+    height: 3px !important;
+    width: calc(100% - 20px);
+    margin: 0px 18px;
+    @include themify($themes) {
+      background: themed('base');
+    }
+  }
+  &__foot {
+    text-align: center;
+    @include FM(R);
+    @include FS(FM);
+    margin-top: 18px;
+    @include themify($themes) {
+      transition: all 0.3s ease-in-out;
+      color: themed('base') !important;
+    }
+    @include mq-down(fm) {
+      @include FS(XS);
+    };
+    display: block;
+    line-height: 1;
+  }
+}

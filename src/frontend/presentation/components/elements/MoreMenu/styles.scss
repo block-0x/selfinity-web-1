@@ -1,0 +1,34 @@
+.moremenu {
+  clear: both;
+  height: 30px;
+  border-radius: 15px;
+  &__link {
+    cursor: pointer;
+    @include default-link;
+    &:hover > .moremenu {
+      // @include themify($themes) {
+      //   transition: all 0.3s ease-in-out;
+      //   background: lighten(themed('base'), 20%) !important;
+      // }
+    }
+    &:hover > .moremenu__image {
+      @include svg-set() {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          stroke: lighten(themed('backgroundThick'), 20%) !important;
+          fill: lighten(themed('backgroundThick'), 20%)!important;
+        }
+      }
+    }
+  }
+  &__image {
+    float: left;
+    @include svg-set() {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        stroke: themed('backgroundThick') !important;
+        fill: themed('backgroundThick')!important;
+      }
+    }
+  }
+}

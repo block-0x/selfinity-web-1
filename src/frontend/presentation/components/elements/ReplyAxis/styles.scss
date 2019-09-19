@@ -1,0 +1,14 @@
+
+.reply-axis {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  padding-left: 24px;
+  &__border {
+    width: 5px;
+    height: 100%;
+    @include themify($themes) {
+        background: themed('backgroundThick');
+    }
+  }
+}

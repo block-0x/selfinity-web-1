@@ -1,0 +1,73 @@
+
+$taskHeaderHeight: 6rem;
+
+.task-header {
+  height: $taskHeaderHeight;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  @include themify($themes) {
+    background: themed('background');
+    border-bottom: solid 1px themed('border');
+  }
+  &__link {
+    @include default-link;
+    &:hover > .task-header {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        background: darken(themed('background'), 5%) !important;
+      }
+    }
+  }
+  &__body {
+    clear: both;
+    width: 1044px;
+    @include mq-down(xxl) {
+      width: 736px;
+    };
+    @include mq-down(lg) {
+      width: 696px;
+    };
+    @include mq-down(md) {
+      width: 90%;
+      max-width: 420px;
+    };
+    margin-left: auto;
+    margin-right: auto;
+    &__title {
+      margin: calc( ( #{$taskHeaderHeight} / 2 ) - 20px) 0px;
+      float: left;
+      @include FS(M);
+      @include FM(B);
+      text-align: left;
+      @include themify($themes) {
+        color: themed('backgroundContrastLight');
+      }
+    }
+    &__point {
+      float: left;
+      margin: calc( ( #{$taskHeaderHeight} / 2 ) - 15px) 120px;
+      @include mq-down(sm) {
+        margin-left: 8px;
+      };
+      margin-right: 0px;
+    }
+    // &__button {
+    //   float: right;
+    //   margin: calc( ( #{$taskHeaderHeight} / 2 ) - 16px) 18px;
+    //   height: 35px;
+    //   width: 300px;
+    //   // @include mq-down(sm) {
+    //   //   width: 120px;
+    //   // };
+    // }
+  }
+  &__border {
+    height: 1px !important;
+    width: calc(100% - 20px);
+    margin: 0px 10px;
+    @include themify($themes) {
+      background: themed('border');
+    }
+  }
+}

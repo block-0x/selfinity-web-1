@@ -1,0 +1,37 @@
+
+.index-component {
+  width: 100%;
+  height: 100%;
+  clear: both;
+  // transition: all 0.3s ease-in-out;
+  .isShowBar &__side {
+    // transition: all 0.3s ease-in-out;
+    z-index: 10;
+    position: fixed;
+    overflow: scroll;
+    width: 240px;
+    height: calc(100vh - 62px);
+    float: left;
+    @include mq-down(xl) {
+      display: none;
+    };
+  }
+  .isShowBar &__children {
+    // transition: all 0.3s ease-in-out;
+    width: calc(100vw - 240px);
+    float: right;
+    height: calc(100vh - 62px);
+    @include mq-down(xl) {
+      width: calc(100vw) !important;
+    };
+  }
+  .isHiddenBar &__side {
+    // transition: all 0.3s ease-in-out;
+    display: none;
+  }
+  .isHiddenBar &__children {
+    // transition: all 0.3s ease-in-out;
+    width: calc(100vw);
+    height: calc(100vh - 62px);
+  }
+}

@@ -1,0 +1,50 @@
+
+.not-found-item {
+  width: 100%;
+  height: 100%;
+  margin: 50px 0;
+  text-align: center;
+  @include themify($themes) {
+    // background: themed('transparent');
+    //box-shadow: 0px 0px 0px 1px themed('shadow');
+  }
+
+  &__title {
+    @include FS(L);
+    @include FM(B);
+    text-align: center;
+    padding: 12px 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @include themify($themes) {
+      color: themed('complementary');
+    }
+  }
+
+  &__body {
+    text-align: center;
+    padding: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @include FS(FM);
+    @include FM(B);
+    @include themify($themes) {
+      color: lighten(themed('string'), 10%);
+    }
+  }
+
+  &__border {
+    height: 1px !important;
+    width: calc(100% - 20px);
+    margin: 0px 10px;
+    @include themify($themes) {
+      background: themed('border');
+    }
+  }
+  &__button {
+    margin: 50px 30%;
+    height: 40px;
+    width: 40%;
+  }
+}

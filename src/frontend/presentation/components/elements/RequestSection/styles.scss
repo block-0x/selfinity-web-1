@@ -1,0 +1,70 @@
+@mixin RequestSectionFold {
+  .isFold & {
+    transition: all 0.1s ease-in-out;
+    transform: rotate(0deg);
+  }
+}
+
+.request-section {
+  padding: 12px 5%;
+  height: 100%;
+  text-align: center;
+  clear: both;
+  @include themify($themes) {
+    background: themed('background');
+    border-top: solid 1px themed('backgroundLight');
+    border-bottom: solid 1px themed('backgroundLight');
+  }
+  &__link {
+    cursor: pointer;
+    @include default-link;
+    &:hover > .request-section {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        background: darken(themed('background'), 5%);
+        // border-top: solid 1px themed('base');
+        // border-bottom: solid 1px themed('base');
+      }
+      & > .request-section__image  {
+        @include svg-set {
+          @include themify($themes) {
+            stroke: lighten(themed('backgroundThick'), 5%) !important;
+            fill: lighten(themed('backgroundThick'), 5%) !important;
+          }
+        }
+      }
+      & > .request-section__value {
+        @include themify($themes) {
+          color: lighten(themed('backgroundThick'), 5%);
+        }
+      }
+    }
+  }
+  &__value {
+    float: left;
+    margin-right: 24px;
+    margin-left: 8px;
+    display: inline;
+    @include FS(S);
+    @include FM(B);
+    text-decoration: none !important;
+    @include themify($themes) {
+        color: themed('backgroundThick');
+    }
+  }
+  &__image {
+    text-decoration: none !important;
+    transition: all 0.1s ease-in-out;
+    width: 24px;
+    height: 24px;
+    float: left;
+    transform: rotate(90deg);
+    @include RequestSectionFold;
+    @include svg-set {
+      @include themify($themes) {
+        stroke: themed('backgroundThick') !important;
+        fill: themed('backgroundThick') !important;
+      }
+    }
+  }
+}

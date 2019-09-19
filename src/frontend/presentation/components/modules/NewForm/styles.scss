@@ -1,0 +1,391 @@
+.EditorToolbar__root___1VC2v {
+  font-family: sans-serif;
+}
+.public-DraftEditor-content {
+  font-family: sans-serif;
+  @include themify($themes) {
+    color: themed('backgroundContrastLight') !important;
+  }
+  div.RichTextEditor__block___3k2zv.RichTextEditor__paragraph___fFnY4 {
+    @include FS(S);
+    @include FM(M);
+    @include mq-down(fm) {
+      @include FS(FS);
+      @include LH(S);
+    };
+  }
+  & h1 {
+    @include FS(FL);
+    @include FM(B);
+    margin: 16px 0;
+    @include mq-down(fm) {
+      @include FS(XM);
+    };
+  }
+  & h2 {
+    @include FS(FL);
+    @include FM(B);
+    margin: 16px 0;
+    @include mq-down(fm) {
+      @include FS(XM);
+    };
+  }
+  & h3 {
+    @include FS(XM);
+    @include FM(B);
+    margin: 16px 0;
+    @include mq-down(fm) {
+      @include FS(M);
+    };
+  }
+  & h4 {
+    @include FS(XS);
+    @include FM(R);
+    margin: 16px 0;
+  }
+}
+
+.IconButton__root___2awWb[title="Image"] {
+  display: none !important;
+}
+
+.new-form {
+  width: 100%;
+  // height: 100%;
+  padding: 15px;
+  @include themify($themes) {
+    background: themed('background');
+  }
+  &__anonymouse {
+    min-height: 50px;
+    padding: 0 12px;
+    clear: both;
+    &-input {
+      float: left;
+      min-height: 50px;
+      margin-right: 8px;
+    }
+  }
+  &__replies {
+    padding: 0 25px;
+    width: 100%;
+    @include mq-down(fm) {
+      padding: 0 5px;
+    };
+    &-title {
+      text-align: left;
+      margin-bottom: 12px;
+      @include FS(S);
+      @include FM(B);
+      @include themify($themes) {
+        color: themed('backgroundContrastLight');
+      }
+      @include mq-down(fm) {
+        margin-left: 10px;
+      };
+    }
+    &-body {
+      height: 100%;
+    }
+  }
+  &__labels {
+    padding: 15px 25px;
+    min-height: 60px;
+    width: 100%;
+  }
+  &__items {
+    height: 100%;
+    // @include themify($themes) {
+    //   background: themed('background');
+    // }
+  }
+  &__header {
+    text-align: left;
+    padding: 15px;
+    @include FS(FM);
+    @include FM(B);
+    @include themify($themes) {
+      color: themed('string');
+    }
+  }
+  &__item {
+    &__atuser {
+      height: 64px;
+      width: 100%;
+      margin-bottom: 12px;
+    }
+    &__title {
+      border: none;
+      width: 100%;
+      min-height: 50px;
+      padding: 0px 15px;
+      &-input {
+        @include FS(M);
+        @include FM(B);
+        border: none;
+        min-height: 50px;
+        width: 100%;
+        @include themify($themes) {
+          border-color: themed('background');
+          // background: themed('background');
+        }
+      }
+    }
+    &__content {
+      border: none;
+      width: 100%;
+      min-height: 300px;
+      padding: 0px 15px;
+      &-input {
+        @include FS(M);
+        @include FM(L);
+        border: none;
+        min-height: 300px;
+        width: 100%;
+        @include themify($themes) {
+          border-color: themed('background');
+          background: themed('background');
+        }
+      }
+    }
+    &__submit {
+      padding: 15px 0px;
+      height: 75px;
+      clear: both;
+      &-option {
+        float: left;
+        &__switch {
+          opacity: 0;
+          height: 0;
+          width: 0;
+          &:checked + .new-form__item__submit-option__image {
+            @include themify($themes) {
+              transition: all 0.3s ease-in-out;
+              box-shadow: 0px 0px 0px 1px themed('base');
+            }
+          }
+          &:haver + .new-form__item__submit-option__image {
+            @include themify($themes) {
+              transition: all 0.3s ease-in-out;
+              box-shadow: 0px 0px 0px 1px themed('base');
+            }
+          }
+          &:checked + .new-form__item__submit-option__image svg g polygon {
+            @include themify($themes) {
+              transition: all 0.3s ease-in-out;
+              stroke: themed('base') !important;
+              fill: themed('base')!important;
+            }
+          }
+          &:checked + .new-form__item__submit-option__image svg g path {
+            @include themify($themes) {
+              transition: all 0.3s ease-in-out;
+              stroke: themed('base') !important;
+              fill: themed('base')!important;
+            }
+          }
+          &:havor + .new-form__item__submit-option__image svg g polygon {
+            @include themify($themes) {
+              transition: all 0.3s ease-in-out;
+              stroke: themed('backgroundThick') !important;
+              fill: themed('backgroundThick')!important;
+            }
+          }
+          &:havor + .new-form__item__submit-option__image svg g path {
+            @include themify($themes) {
+              transition: all 0.3s ease-in-out;
+              stroke: themed('backgroundThick') !important;
+              fill: themed('backgroundThick')!important;
+            }
+          }
+        }
+        &__link {
+          cursor: pointer;
+          @include default-link;
+          &:havor > .new-form__item__submit-option__image svg g polygon {
+            @include themify($themes) {
+              transition: all 0.3s ease-in-out;
+              stroke: themed('background') !important;
+              fill: themed('background')!important;
+            }
+          }
+          &:havor > .new-form__item__submit-option__image svg g path {
+            @include themify($themes) {
+              transition: all 0.3s ease-in-out;
+              stroke: themed('background') !important;
+              fill: themed('background')!important;
+            }
+          }
+        }
+        &__image {
+          margin: 10px;
+          padding: 5px;
+          height: 40px;
+          width: 40px;
+          border-radius: 5px;
+          @include themify($themes) {
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 0px 0px 1px themed('backgroundThick');
+          }
+          & svg g polygon {
+            @include themify($themes) {
+              transition: all 0.3s ease-in-out;
+              stroke: themed('backgroundThick') !important;
+              fill: themed('backgroundThick')!important;
+            }
+          }
+          & svg g path {
+            @include themify($themes) {
+              transition: all 0.3s ease-in-out;
+              stroke: themed('backgroundThick') !important;
+              fill: themed('backgroundThick')!important;
+            }
+          }
+        }
+      }
+      &-button {
+        height: 100%;
+        float: right;
+        width: 50%;
+        @include mq-down(md) {
+          width: 100%;
+        };
+      }
+      &-full-button {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &__picker {
+      border: none;
+      width: 100%;
+      height: 50px;
+      padding: 0px 15px;
+      display: flex;
+      &__start-date {
+        margin-right: 10px;
+        height: 28px;
+        &-input {
+          height: 28px;
+          width: 100%;
+          padding: 4px 7px;
+          cursor: text;
+          @include FS(S);
+          @include FM(L);
+          line-height: 1.5;
+          background-image: none;
+          @include themify($themes) {
+            background: themed('background');
+            color: themed('backgroundThick');
+            border: 1px solid themed('backgroundLight');
+          }
+          border-radius: 4px;
+          transition: border 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+      }
+      &__start-time {
+
+      }
+      &__start-end {
+        text-align: center;
+        margin: 5px;
+        @include FS(S);
+        @include FM(L);
+      }
+      &__end-date {
+        height: 28px;
+        margin-right: 10px;
+        &-input {
+          height: 28px;
+          width: 100%;
+          padding: 4px 7px;
+          cursor: text;
+          @include FS(S);
+          @include FM(L);
+          line-height: 1.5;
+          background-image: none;
+          @include themify($themes) {
+            background: themed('background');
+            color: themed('backgroundThick');
+            border: 1px solid themed('backgroundLight');
+          }
+          border-radius: 4px;
+          transition: border 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+      }
+      &__end-time {
+
+      }
+    }
+  }
+  &__border {
+    margin: 20px 0px;
+    height: 1px !important;
+    width: 100%;
+    @include themify($themes) {
+      background: themed('backgroundLight');
+    }
+  }
+  &__opinion {
+    margin: 10px 5px;
+    clear: both;
+    &__link {
+      @include default-link;
+      cursor: pointer;
+      height: 100%;
+    }
+  }
+  &__bid {
+    min-height: 38px;
+    padding: 0 12px;
+    margin-bottom: 8px;
+    &-input {
+      height: 38px;
+      padding: 6px 10px;
+      background-color: #fff;
+      border: 1px solid #D1D1D1;
+      border-radius: 4px;
+      box-shadow: none;
+      box-sizing: border-box;
+    }
+    &-value {
+      float: left;
+      padding: 8px;
+      @include FS(FM);
+      @include FM(B);
+      @include themify($themes) {
+        color: themed('backgroundThick');
+      }
+    }
+  }
+  &__cheering {
+    min-height: 50px;
+    padding: 0 25px;
+    clear: both;
+    &-input {
+      float: left;
+      min-height: 50px;
+      margin-right: 8px;
+    }
+    &-value {
+      float: left;
+      height: 20px;
+      width: 18px;
+      margin: 12px 8px;
+      margin-left: 0;
+    }
+  }
+}
+
+.RichTextEditor__root___33zoV {
+  min-height: 300px !important;
+  border: none !important;
+}
+
+.RichTextEditor__root___33zoV button {
+  margin-right: 0 !important;
+}
+
+.EditorToolbar__root___1VC2v {
+  padding: 0px !important;
+}

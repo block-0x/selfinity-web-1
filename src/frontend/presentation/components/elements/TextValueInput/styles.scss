@@ -1,0 +1,43 @@
+.text-value-input {
+  @include init_wh();
+  padding: 20px 0px;
+  text-align: center;
+  clear: both;
+  @include themify($themes) {
+    background: themed('background');
+  }
+  @include mq-down(fm) {
+    padding: 20px 12px;
+  };
+  &__title {
+    max-width: 50%;
+    text-align: left;
+    float: left;
+    display: inline;
+    // margin-left: 48px;
+    @include FS(FM);
+    @include FM(M);
+    text-decoration: none !important;
+    @include themify($themes) {
+        color: themed('backgroundThick');
+    }
+    @include mq-down(fm) {
+      @include FS(S);
+    };
+  }
+  &__value {
+    display: inline;
+    float: right;
+    text-align: left;
+    height: 30px;
+    @include FS(FM);
+    @include FM(M);
+    border: none;
+    width: 60%;
+    padding: 4px;
+    @include themify($themes) {
+      border-bottom: solid 1px themed('complementary');
+      background: themed('background');
+    }
+  }
+}

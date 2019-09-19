@@ -1,0 +1,45 @@
+.high-light {
+  @include init_wh();
+  position: relative;
+  &__background {
+    position: absolute;
+    @include init_wh();
+    &-image {
+      background-attachment: fixed;
+      background-size: contain;
+      @include init_wh();
+      @include themify($themes) {
+        @include blur(0.8, 6px);
+      }
+      &-cover {
+        @include themify($themes) {
+          @include blur-after(themed('string'), 0.4);
+        }
+      }
+    }
+  }
+  &__title {
+    top: 15px;
+    position: relative;
+    text-align: center;
+    @include init_wh();
+    @include FS(L);
+    @include FM(B);
+    @include themify($themes) {
+      color: themed('background');
+    }
+  }
+  &__items {
+    position: relative;
+    top: 0;
+    left: 0;
+    @include init_wh();
+    clear: both;
+    @include flex-center;
+  }
+  &__item {
+    float: left;
+    margin: 45px;
+    width: 22vw;
+  }
+}

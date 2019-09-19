@@ -1,0 +1,86 @@
+.invite-show-list {
+  width: 60%;
+  min-width: 400px;
+  max-width: 720px;
+  margin: 0 auto;
+  @include mq-down(md) {
+    width: calc(100% - 40px);
+    margin: 20px;
+    min-width: 280px;
+  };
+  @include mq-down(sm) {
+    width: calc(100% - 20px);
+    margin: 10px;
+    min-width: 280px;
+  };
+
+  &__code {
+    height: 44px;
+  }
+
+  &__text {
+    width: 100%;
+    height: 84px;
+    margin: 20px 0;
+    padding: 10px;
+    @include FM(M);
+    @include FS(FS);
+    @include LH(FS);
+    @include themify($themes) {
+      color: themed('backgroundContrastLight');
+    }
+  }
+
+  &__form {
+    margin-top: 120px;
+    &-item {
+      width: 100%;
+      height: 84px;
+      margin: 20px 0;
+    }
+    &-text {
+      width: 100%;
+      height: 84px;
+      margin: 20px 0;
+      padding: 10px;
+      @include FM(M);
+      @include FS(FS);
+      @include LH(FS);
+      @include themify($themes) {
+        color: themed('backgroundContrastLight');
+      }
+    }
+    &-button {
+      height: 44px;
+      margin: 20px auto;
+      width: calc(100% - 40px);
+    }
+  }
+
+  & > h1 {
+    @include FM(B);
+    @include FS(L);
+  }
+  & > p {
+    @include FM(M);
+    @include FS(FS);
+    margin: 16px 10px;
+  }
+  & > h2 {
+    @include FM(B);
+    @include FS(S);
+    margin: 16px 0;
+  }
+  & > ol > li {
+    @include FM(M);
+    @include FS(FS);
+    margin: 10px 24px;
+    list-style-type: decimal;
+    & > ol > li {
+      @include FM(M);
+      @include FS(FS);
+      margin: 10px 24px;
+      list-style-type: upper-roman;
+    }
+  }
+}

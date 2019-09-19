@@ -1,0 +1,17 @@
+.instagram-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  @include themify($themes) {
+    box-shadow: 0px 0px 4px 2px themed('shadow');
+    background: themed('background');
+  }
+  &__link {
+    cursor: pointer;
+  }
+  &__image {
+    border-radius: 22px;
+    width: 44px;
+    height: 44px;
+  }
+}

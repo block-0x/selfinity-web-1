@@ -1,0 +1,28 @@
+.border-input-item {
+  @include init_wh();
+  padding: 20px 0px;
+  text-align: center;
+  clear: both;
+  @include themify($themes) {
+    background: themed('background');
+  }
+  @include mq-down(fm) {
+    padding: 20px 12px;
+  };
+  &__input {
+    display: inline;
+    float: right;
+    text-align: left;
+    height: 30px;
+    @include FS(FM);
+    @include FM(M);
+    border: none;
+    width: 100%;
+    padding: 8px;
+    @include themify($themes) {
+      border-bottom: solid 2px themed('complementary');
+      background: themed('background');
+      color: themed('backgroundContrastLight');
+    }
+  }
+}

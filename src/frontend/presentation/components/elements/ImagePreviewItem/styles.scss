@@ -1,0 +1,21 @@
+.image-preview-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+  &__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    @include themify($themes) {
+      transition: all 0.3s ease-in-out;
+      background: themed('background');
+    }
+    @include blur(0.7);
+  }
+}

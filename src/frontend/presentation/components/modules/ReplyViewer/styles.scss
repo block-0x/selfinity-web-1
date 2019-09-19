@@ -1,0 +1,22 @@
+.reply-viewer {
+  height: 100%;
+  @include init_wh();
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  padding: 15px;
+  overflow-y: visible;
+  @include mq-down(sm) {
+    padding: 15px 4px;
+  };
+  &__item {
+    margin: 4px;
+    display: inline-block;
+    max-width: calc(100% - 20px);
+    height: 100%;
+    min-width: 380px;
+    @include mq-down(fm) {
+      min-width: 270px;
+    };
+  }
+}

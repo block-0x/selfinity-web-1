@@ -1,0 +1,30 @@
+.user-stats-bar {
+  padding: 5px 16px;
+  width: 100%;
+  height: 100%;
+  clear: both;
+  @include themify($themes) {
+    transition: all 0.3s ease-in-out;
+    // border-top: solid 1px themed('backgroundLight');
+    // border-bottom: solid 1px themed('backgroundLight');
+    background: themed('transparent');
+  }
+  cursor: pointer;
+  &__image {
+    float: left;
+    margin-right: 15px;
+  }
+  &__value {
+    max-width: calc(100% - 50px);
+    @include FS(FS);
+    @include FM(B);
+    // margin-bottom: 4px;
+    @include themify($themes) {
+      color: themed('backgroundThick');
+    }
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    float: left;
+  }
+}

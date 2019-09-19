@@ -1,0 +1,66 @@
+@mixin ActiveDownvote {
+  .active & {
+    @include svg-set() {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        stroke: themed('complementary') !important;
+        fill: themed('complementary')!important;
+      }
+    }
+  }
+}
+
+@mixin ActivDownvoteHover {
+  .active & {
+    @include svg-set() {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        stroke: lighten(themed('complementary'), 20%) !important;
+        fill: lighten(themed('complementary'), 20%) !important;
+      }
+    }
+  }
+}
+
+.downvote {
+  clear: both;
+  height: 30px;
+  &__link {
+    cursor: pointer;
+    @include default-link;
+    &:hover > .downvote__image {
+      @include svg-set() {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          stroke: lighten(themed('backgroundThick'), 20%) !important;
+          fill: lighten(themed('backgroundThick'), 20%)!important;
+        }
+      }
+      @include ActivDownvoteHover;
+    }
+  }
+  &__image {
+    float: left;
+    @include svg-set() {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        stroke: themed('backgroundThick') !important;
+        fill: themed('backgroundThick')!important;
+      }
+    }
+    @include ActiveDownvote;
+  }
+  &__score {
+    height: 100%;
+    padding: 12px 0px;
+    float: left;
+    margin-left: 6px;
+    @include FM('L');
+    @include FS('M');
+    line-height: 0 !important;
+    @include themify($themes) {
+      transition: all 0.3s ease-in-out;
+      color: themed('backgroundThick') !important;
+    }
+  }
+}

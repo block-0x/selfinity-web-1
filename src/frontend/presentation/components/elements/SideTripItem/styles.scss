@@ -1,0 +1,53 @@
+
+.side-trip-item {
+  padding: 8px 10px;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include themify($themes) {
+    background: themed('backgroundLight');
+  }
+  &__link {
+    cursor: pointer;
+    @include default-link;
+    &:hover > .side-trip-item {
+      @include themify($themes) {
+        transition: all 0.3s ease-in-out;
+        background: themed('background');
+      }
+      & > .side-trip-item__icon svg g polygon {
+        @include themify($themes) {
+          stroke: lighten(themed('backgroundThick'), 5%) !important;
+          fill: lighten(themed('backgroundThick'), 5%)!important;
+        }
+      }
+      & > .side-trip-item__icon svg g path {
+        @include themify($themes) {
+          stroke: lighten(themed('backgroundThick'), 5%) !important;
+          fill: lighten(themed('backgroundThick'), 5%)!important;
+        }
+      }
+      & > .side-trip-item__value {
+        @include themify($themes) {
+          color: lighten(themed('backgroundThick'), 5%);
+        }
+      }
+    }
+  }
+  &__value {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @include FS(FS);
+    @include FM(R);
+    text-decoration: none !important;
+    @include themify($themes) {
+        color: themed('backgroundThick');
+    }
+  }
+  &__image {
+    margin-right: 8px;
+  }
+}

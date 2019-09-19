@@ -1,0 +1,60 @@
+.quote-item {
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+  clear: both;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  &__text {
+    transition: all 0.3s ease-in-out;
+    width: calc(100% - 20px;);
+    height: 100%;
+    @include themify($themes) {
+      transition: all 0.3s ease-in-out;
+      border-left: 4px solid themed('backgroundThick');
+    }
+    padding: 8px 16px;
+    &-raw {
+      transition: all 0.3s ease-in-out;
+      @include FS(FS);
+      @include FM(R);
+      @include LH(FM);
+      text-align: left;
+      height: 100%;
+      // text-overflow: ellipsis;
+      // overflow: hidden;
+      // white-space: normal;
+      @include themify($themes) {
+        color: themed('backgroundThick');
+      }
+      border-radius: 15px;
+    }
+  }
+  &__more {
+    & span {
+      display: block !important;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+    &-raw {
+      transition: all 0.3s ease-in-out;
+      @include svg-set() {
+        @include themify($themes) {
+          transition: all 0.3s ease-in-out;
+          stroke: themed('backgroundThick') !important;
+          fill: themed('backgroundThick') !important;
+        }
+      }
+      &:hover {
+        transition: all 0.3s ease-in-out;
+        @include svg-set() {
+          @include themify($themes) {
+            transition: all 0.3s ease-in-out;
+            stroke: lighten(themed('backgroundThick'), 20%) !important;
+            fill: lighten(themed('backgroundThick'), 20%)!important;
+          }
+        }
+      }
+    }
+  }
+}

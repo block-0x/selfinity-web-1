@@ -1,0 +1,15 @@
+.blur-background {
+  @include init_wh();
+  position: relative;
+  &__image {
+    @include init_wh();
+    @include themify($themes) {
+      @include blur(0.8, 6px);
+    }
+    &-cover {
+      @include themify($themes) {
+        @include blur-after(themed('string'), 0.4);
+      }
+    }
+  }
+}

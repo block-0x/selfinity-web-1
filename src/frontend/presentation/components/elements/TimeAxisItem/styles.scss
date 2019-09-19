@@ -1,0 +1,40 @@
+.timeaxis-item {
+  z-index: 90;
+  width: 100%;
+  clear: both;
+  height: 100%;
+  text-align: left;
+  @include themify($themes) {
+    background: themed('background');
+  }
+  &__link {
+    @include default-link;
+      &:hover > .timeaxis-item {
+      //   @include themify($themes) {
+      //     transition: all 0.3s ease-in-out;
+      //     box-shadow: 0px 0px 10px 2px themed('complementary');
+      // }
+    }
+  }
+  &__title {
+    @include FS(S);
+    @include FM(M);
+    text-align: left;
+    height: 30px;
+    padding: 8px 0px;
+    float: left;
+    @include themify($themes) {
+      color: themed('backgroundThick');
+    }
+  }
+
+  &__border {
+    height: 1px !important;
+    width: 92%;
+    margin: 14.5px 10px;
+    float: right;
+    @include themify($themes) {
+      background: themed('backgroundThick');
+    }
+  }
+}

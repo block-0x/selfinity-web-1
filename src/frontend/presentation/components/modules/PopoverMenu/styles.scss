@@ -1,0 +1,10 @@
+.popover-menu {
+  text-align: right;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  @include themify($themes) {
+    background: themed('background');
+    box-shadow: 0px 0px 5px 3px themed('shadow');
+  }
+}
